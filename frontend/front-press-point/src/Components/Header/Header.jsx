@@ -6,7 +6,7 @@ export default function Header () {
         <div className='header'>
         <p className='logo'>Press/Point</p>
         <div className='accountButton'>
-            <PersonalAccountButton />
+            <PersonalAccountButton>Особистий кабінет</PersonalAccountButton>
         </div>
     </div>
     )

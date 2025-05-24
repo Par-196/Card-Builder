@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button'
 
-export default function PersonalAccountButton() {
+export default function PersonalAccountButton(props) {
   return (
     <Button 
     variant='contained'
@@ -11,8 +11,9 @@ export default function PersonalAccountButton() {
         height: 70,
         fontSize: 20,
         fontWeight: 700,
-        fontFamily: 'Inter, sans-serif',
-        textTransform: 'none'
-      }}>Особистий кабінет</Button>
+        fontFamily: 'JetBrains Mono, monospace',
+        textTransform: 'none',
+      }}
+      >{props.children}</Button>
   )
 }

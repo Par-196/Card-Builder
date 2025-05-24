@@ -1,0 +1,38 @@
+.contentBlock
+{
+    width: 100%;
+    height: 282px ;
+}
+.leftContainer
+{
+    width: 640px;
+    height: 282px;
+    padding-left: 100px ;
+}
+.sloganBlock 
+{   
+    width: 100%;
+    height: 150px;
+}
+.slogan
+{
+    font-size: 68px;
+    font-weight: 800px;
+    height: 150px;
+    opacity: 0.8;
+}
+.mainPageButtonBlock
+{
+    width: 100%;
+    height: 132px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.productButton, 
+.aboutUsButton
+{
+    width: 270px;
+    height: 70px;
+}
+
