@@ -1,13 +1,23 @@
 .contentBlock
 {
     width: 100%;
-    height: 282px ;
+    height: 520px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .leftContainer
 {
     width: 640px;
     height: 282px;
-    padding-left: 100px ;
+    padding-left: 100px;
+    padding-top: 160px;
+}
+.rightContainer
+{
+    width: 520px;
+    height: 520px;
+    padding-right: 100px;
 }
 .sloganBlock 
 {   

@@ -1,5 +1,6 @@
 import MainContentButton from '../../UI/Buttons/MainContentButton'
 import './MainPageContent.css'
+import CircularVideo from '../../UI/Buttons/CircularVideo'
 
 export default function MainPageContent()
 {
@@ -20,7 +21,7 @@ export default function MainPageContent()
             </div>
             <div className='rightContainer'>
                 <div>
-
+                    <CircularVideo />
                 </div>
             </div>  
         </div>
