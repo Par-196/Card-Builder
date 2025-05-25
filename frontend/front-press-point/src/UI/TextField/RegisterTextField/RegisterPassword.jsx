@@ -18,6 +18,7 @@ export default function RegisterPassword() {
       sx={{
         width: 480,    
         color: 'white',
+        borderBottomColor: 'white',
         '& .MuiInputBase-root': {
           color: 'white',
           width: 480, 

@@ -19,6 +19,7 @@ export default function PasswordTextField() {
         m: 1,
         width: 400,
         color: 'white',
+        borderBottomColor: 'white',
         '& .MuiInputBase-root': {
           color: 'white',
         },
