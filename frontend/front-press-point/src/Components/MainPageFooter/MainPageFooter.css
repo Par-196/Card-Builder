@@ -8,12 +8,12 @@
 }
 .officeAddresses
 {
-    width: 50%;
+    width: 46%;
     padding-left: 100px;
 }
 .contacts
 {
-    width: 540px;
+    width: 520px;
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -32,11 +32,11 @@
 }
 .email
 {
-    width: 44%;
+    width: 228px;
 }
 .number
 {
-    width: 36%;
+    width: 178px;
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -60,20 +60,20 @@
 
     font-size: 20px;
     font-weight: 800;
-    color: #6F6F6F;
+    color: #ffffff;
 }
 .firstAddress
 {
-    width: 370px;
+    width: 340px;
     height: 24px;
 }
 .secondAddress
 {
-    width: 250px;
+    width: 220px;
     height: 24px;
 }
 .thirdAddress
 {
-    width: 220px;
+    width: 190px;
     height: 24px;
 }

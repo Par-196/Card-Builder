@@ -8,7 +8,7 @@ export default function MainContentButton(props)
             sx={{
             backgroundColor: 'white',
             color: 'black',
-            opacity: 0.8,
+            opacity: 0.6,
             width: 270,
             height: 70,
             fontSize: 20,

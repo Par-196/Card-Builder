@@ -11,7 +11,7 @@
     width: 640px;
     height: 282px;
     padding-left: 100px;
-    padding-top: 160px;
+    padding-top: 130px;
 }
 .rightContainer
 {
@@ -22,19 +22,20 @@
 .sloganBlock 
 {   
     width: 100%;
-    height: 150px;
+    height: 160px;
 }
 .slogan
 {
     font-size: 68px;
     font-weight: 800px;
     height: 150px;
-    opacity: 0.8;
+    color: #ffffff;
+    opacity: 0.9;
 }
 .mainPageButtonBlock
 {
     width: 100%;
-    height: 132px;
+    height: 140px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;

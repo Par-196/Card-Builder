@@ -1,21 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Header from './Components/Header/Header.jsx'
-import MainPageFooter from './Components/MainPageFooter/MainPageFooter.jsx'
-import MainPageContent from './Components/MainPageContent/MainPageContent.jsx'
+import {Routes, Route, Navigate} from 'react-router-dom'
+import MainLayout from './Layout/MainLayout/MainLayout.jsx'
+import MainPage from './Pages/MainPage/MainPage.jsx'
 
 
-function App() {
+
+export default function App() {
   return (
-    <div className='container'>
-      <Header />
-      <MainPageContent />
-      <MainPageFooter />
-    </div>
+    <Routes >
+      <Route path="/" element={<MainLayout />} >  
+        <Route path="/" element={<MainPage />} /> 
+        
+      </Route>
+
+    </Routes>
   )
 }
-
-
-export default App

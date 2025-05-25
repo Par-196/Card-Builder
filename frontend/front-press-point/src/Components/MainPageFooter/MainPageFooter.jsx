@@ -43,7 +43,7 @@ export default function MainPageFooter()
                     </div>
                     <div className='text'>
                         <p>
-                            +38 068 513 7214
+                            +38 012 345 6789
                         </p>
                     </div>
                 </div>
