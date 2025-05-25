@@ -1,7 +1,7 @@
-.loginFormBody
+.registrationFormBody
 {
-    width: 550px;
-    height: 700px;
+    width: 700px;
+    height: 570px;
     border: 10px;
     border-width: 4px;
     border-style: solid;
@@ -12,41 +12,48 @@
     flex-direction: column;
     align-items: center;
 }
-.loginFormTitel
+.registrationFormTitel
 {
-    width: 120px;
+    width: 300px;
     height: 170px;
     font-size: 54px;
     color: white;
     display: flex;
     align-items: center;
 }
-.loginFormFieldContainer
+.registrationFormFieldContainer
 {
-    width: 400px;
-    height: 160px;
+    width: 480px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 14px;
 }
-.loginEmail,
-.loginEmail
+.registrationNameContainer
 {
-    width: 100%;
-    height: 24px;
+    width: 480px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.loginFormButtonContainer
+.registrationEmail,
+.registrationPassword
+{
+    width: 480px;
+    height: 120px;
+    margin-top: 20px;
+}
+.registrationFormButtonContainer
 {
     width: 400px;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 92px;
+    margin-top: 62px;
 }
-.loginFormFirstButton,
-.loginFormSecondButton
+.registrationFormFirstButton
 {
     width: 100%;
     height: 80px;

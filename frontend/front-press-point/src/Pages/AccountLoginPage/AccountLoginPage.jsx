@@ -1,11 +1,11 @@
-import './AccountLogin.css'
+import './AccountLoginPage.css'
 import LoginForm from '../../Components/LoginForm/LoginForm.jsx'
 
 
-export default function AccountLogin()
+export default function AccountLoginPage()
 {
     return(
-        <div className='bog'>
+        <div className='fieldBox'>
             <LoginForm />
         </div>
     )

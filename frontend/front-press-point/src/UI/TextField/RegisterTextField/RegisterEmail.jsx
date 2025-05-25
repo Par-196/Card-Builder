@@ -2,7 +2,7 @@ import { inputBaseClasses } from '@mui/material/InputBase';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 
-export default function EmailLoginTextField () 
+export default function RegisterEmail ({ sx = {} }) 
 {
   return(
     <TextField
@@ -10,9 +10,9 @@ export default function EmailLoginTextField ()
       label="Email"
       variant="standard"
       sx={{
-        width: 400,
+        width: 480,
         height: 23,
-        margin: 1,
+        marginRight: 6,
         '& .MuiInputLabel-root': {
           color: 'white',
         },
@@ -31,12 +31,11 @@ export default function EmailLoginTextField ()
         [`& .${inputBaseClasses.input}`]: {
           color: 'white',      
           borderRadius: 1,
-          paddingRight: '60px', // місце для adornment
+          paddingRight: '60px', 
         },
         '& input': {
           color: 'white', 
         },
-        // Важливо: колір @gmail.com
         '& .MuiInputAdornment-root': {
           color: 'white',
           opacity: 1,

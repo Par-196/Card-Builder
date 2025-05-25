@@ -1,6 +1,10 @@
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginAndRegistrationButton(props) {
+  const navigate = useNavigate();
+  const buttonText = props.children;
+
   return (
     <div>
       <Button
@@ -14,15 +18,25 @@ export default function LoginAndRegistrationButton(props) {
           color: 'rgba(146, 146, 146)',
           fontWeight: 800,
           fontSize: 40,
+          textTransform: 'none',
           fontFamily: "'JetBrains Mono', monospace",
           '&:hover': {
             backgroundColor: 'rgba(24, 24, 24, 0.7)',
             borderColor: 'white',
           },
         }}
+        onClick={() => {
+          if (buttonText === 'Увійти') {
+            navigate('/mainpage');
+          } else if (buttonText === 'Реєстрація') {
+            navigate('/accountregistrationpage');
+          } else if (buttonText === 'Зареєструватися') {
+            navigate('/accountloginpage');
+          }
+        }}
       >
         {props.children}
       </Button>
     </div>
   );
-}
+  };

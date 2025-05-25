@@ -1,5 +1,5 @@
-import LoginTextField from '../../UI/TextField/PasswordLoginTextField.jsx'
-import EmailLoginTextField from '../../UI/TextField/EmailLoginTextField.jsx'
+import LoginPassword from '../../UI/TextField/LoginTextField/LoginPassword.jsx'
+import LoginEmail from '../../UI/TextField/LoginTextField/LoginEmail.jsx'
 import LoginAndRegistrationButton from '../../UI/Buttons/LoginAndRegistrationButton.jsx'
 import './LoginForm.css'
 
@@ -7,19 +7,19 @@ import './LoginForm.css'
 export default function LoginForm()
 {
     return (
-        <div className='formBody'>
-            <div className='formTitel'>
+        <div className='loginFormBody'>
+            <div className='loginFormTitel'>
                 <p>Вхід</p>
             </div>
             <div className='loginFormFieldContainer'>
-                <div className='loginFormFirstFieldContainer'>
-                    <LoginTextField />
+                <div className='loginEmail'>
+                    <LoginPassword />
                 </div>
-                <div className='loginFormSecondFieldContainer'>
-                    <EmailLoginTextField />
+                <div className='LoginPassword'>
+                    <LoginEmail />
                 </div>
             </div>
-            <div className='loginFormButtonContainer'>
+            <div className='loginFormButtonContainer'> 
                 <div className='loginFormFirstButton'>
                     <LoginAndRegistrationButton>Увійти</LoginAndRegistrationButton>
                 </div>
