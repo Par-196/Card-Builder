@@ -17,7 +17,7 @@ export default function PersonalAccountButton(props) {
         height: 70,
         fontSize: 20,
         fontWeight: 700,
-        fontFamily: 'JetBrains Mono, monospace',
+        fontFamily: "'JetBrains Mono', monospace",
         textTransform: 'none',  
       }}
       onClick={() => navigate("/accountlogin") }

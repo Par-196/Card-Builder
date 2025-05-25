@@ -8,17 +8,24 @@ export default function LoginForm()
 {
     return (
         <div className='formBody'>
-            <div>
-                <LoginTextField />
+            <div className='formTitel'>
+                <p>Вхід</p>
             </div>
-            <div>
-                <EmailLoginTextField />
+            <div className='loginFormFieldContainer'>
+                <div className='loginFormFirstFieldContainer'>
+                    <LoginTextField />
+                </div>
+                <div className='loginFormSecondFieldContainer'>
+                    <EmailLoginTextField />
+                </div>
             </div>
-            <div>
-                <LoginAndRegistrationButton>Увійти</LoginAndRegistrationButton>
-            </div>
-            <div>
-                <LoginAndRegistrationButton>Реєстрація</LoginAndRegistrationButton>
+            <div className='loginFormButtonContainer'>
+                <div className='loginFormFirstButton'>
+                    <LoginAndRegistrationButton>Увійти</LoginAndRegistrationButton>
+                </div>
+                <div className='loginFormSecondButton'>
+                    <LoginAndRegistrationButton>Реєстрація</LoginAndRegistrationButton>
+                </div>
             </div>
         </div>
     )

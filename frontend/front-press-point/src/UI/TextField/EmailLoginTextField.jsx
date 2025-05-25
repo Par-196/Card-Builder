@@ -7,11 +7,12 @@ export default function EmailLoginTextField ()
   return(
     <TextField
       id="standard-suffix-shrink"
-      label="Standard"
+      label="Email"
       variant="standard"
       sx={{
         width: 400,
         height: 23,
+        margin: 1,
         '& .MuiInputLabel-root': {
           color: 'white',
         },
@@ -30,13 +31,18 @@ export default function EmailLoginTextField ()
         [`& .${inputBaseClasses.input}`]: {
           color: 'white',      
           borderRadius: 1,
-          paddingRight: '60px',
+          paddingRight: '60px', // місце для adornment
         },
         '& input': {
           color: 'white', 
         },
+        // Важливо: колір @gmail.com
         '& .MuiInputAdornment-root': {
           color: 'white',
+          opacity: 1,
+          pointerEvents: 'auto',
+          fontWeight: 600,
+          fontSize: '1rem',
         },
       }}
       slotProps={{
@@ -51,15 +57,9 @@ export default function EmailLoginTextField ()
                 alignSelf: 'flex-end',
                 margin: 0,
                 marginBottom: '5px',
-                opacity: 0,
-                pointerEvents: 'none',
-                color: 'white',
-                [`[data-shrink=true] ~ .${inputBaseClasses.root} > &`]: {
-                  opacity: 1,
-                },
               }}
             >
-              @gmail.com
+              <span color='white'>@gmail.com</span>
             </InputAdornment>
           ),
         },
