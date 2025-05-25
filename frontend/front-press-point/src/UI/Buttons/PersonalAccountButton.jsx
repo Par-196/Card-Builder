@@ -1,8 +1,13 @@
 import Button from '@mui/material/Button'
 import { useNavigate } from 'react-router-dom'
+import MainPage from '../../Pages/MainPage/MainPage'
 
 export default function PersonalAccountButton(props) {
+
+  const navigate = useNavigate();
+
   return (
+
     <Button 
     variant='contained'
     sx={{
@@ -15,6 +20,7 @@ export default function PersonalAccountButton(props) {
         fontFamily: 'JetBrains Mono, monospace',
         textTransform: 'none',  
       }}
+      onClick={() => navigate("/accountlogin") }
       >{props.children}</Button>
   )
 }
