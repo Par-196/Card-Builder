@@ -27,7 +27,7 @@ export default function LoginAndRegistrationButton(props) {
         }}
         onClick={() => {
           if (buttonText === 'Увійти') {
-            navigate('/personalaccount');
+            navigate('/personalaccountpage');
           } else if (buttonText === 'Реєстрація') {
             navigate('/accountregistrationpage');
           } else if (buttonText === 'Зареєструватися') {

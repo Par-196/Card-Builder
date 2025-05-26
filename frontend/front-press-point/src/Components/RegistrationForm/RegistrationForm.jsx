@@ -1,7 +1,7 @@
 import RegisterPassword from '../../UI/TextField/RegisterTextField/RegisterPassword.jsx'
 import RegisterEmail from '../../UI/TextField/RegisterTextField/RegisterEmail.jsx'
 import LoginAndRegistrationButton from '../../UI/Buttons/LoginAndRegistrationButton.jsx'
-import TextButton from '../../UI/TextField/FirstAndSeconsNameField.jsx'
+import FirstAndLastNameField from '../../UI/TextField/FirstAndLastNameField.jsx'
 import './RegistrationForm.css'
 
 
@@ -15,10 +15,10 @@ export default function RegistrationForm()
             <div className='registrationFormFieldContainer'>
                 <div className='registrationNameContainer'>
                     <div className='registrationFirstName'>
-                        <TextButton>Ім'я</TextButton>
+                        <FirstAndLastNameField>Ім'я</FirstAndLastNameField>
                     </div>
                     <div className='registrationSecondName'>
-                        <TextButton>Прізвище</TextButton>
+                        <FirstAndLastNameField>Прізвище</FirstAndLastNameField>
                     </div>
                 </div>
                 <div className='registrationEmail'>

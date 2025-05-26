@@ -1,0 +1,35 @@
+.orderStatusesContainer
+{
+    width: 100%;
+    margin: 75px 100px 0 100px ;
+}
+.orderStatusesContainerTitle
+{
+    width: calc(100% - 200px);
+    height: 50px;
+    font-size: 48px;
+}
+.orderStatusesBox
+{
+    width: calc(100% - 200px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 180px;
+    margin: 50px 0 0 0;
+}
+.orderStatusesItem
+{
+    width: 440px;
+}
+.orderStatusesBoxTitle
+{
+    width: 440px;
+    font-size: 40px;
+}
+.orderStatusesBoxContent
+{
+    width: 440px;
+    font-size: 24px;
+    margin: 25px 0 0 0;
+}

@@ -1,13 +1,11 @@
-.page
-{
-  background: url('../../assets/img/MainPageBack.jpg');
-  background-size: cover;
-}
 .mainPageComponents {
   height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: url('../../assets/img/MainPageBack.jpg');
+  background-size: cover;
+  background-position: center -120px;
 }
 .mainPageContent
 {
