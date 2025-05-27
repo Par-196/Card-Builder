@@ -9,7 +9,6 @@ import AuthVerify from './services/authService/authService.js'
 
 export default function App() {
   return (
-    <>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route path="/" element={<MainPage />} />
@@ -18,7 +17,5 @@ export default function App() {
         <Route path="/login" element={<AccountLoginPage />} />
         <Route path='/registration' element={<AccountRegistrationPage />} />
       </Routes>
-      <AuthVerify/> 
-    </>
   )
 }

@@ -19,5 +19,4 @@ export default function MainContentButton(props)
         }}>
         {props.children}</Button>
     )
-    
 }

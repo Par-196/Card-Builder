@@ -3,45 +3,45 @@ import './MainPageFooter.css'
 export default function MainPageFooter() 
 {
     return (
-        <div className='footer'>
-            <div className='officeAddresses'>
-                <div className='titel'>
+        <div className='mainPageFooterFooter'>
+            <div className='mainPageFooterOfficeAddresses'>
+                <div className='mainPageFooterTitle'>
                     <p>
                         Адреси наших офісів
                     </p>
                 </div>
-                <div className='text'>
-                    <p className='firstAddress'>
+                <div className='mainPageFooterText'>
+                    <p className='mainPageFooterFirstAddress'>
                         вул. Богдана Хмельницького, 50
                     </p>
-                    <p className='secondAddress'>
+                    <p className='mainPageFooterSecondAddress'>
                         просп. Перемоги, 45
                     </p>
-                    <p className='thirdAddress'>
+                    <p className='mainPageFooterThirdAddress'>
                         вул. Хрещатик, 22
                     </p>
                 </div>
             </div>
-            <div className='contacts'>
-                <div className='email'>
-                    <div className='titel'>
+            <div className='mainPageFooterContacts'>
+                <div className='mainPageFooterEmail'>
+                    <div className='mainPageFooterTitle'>
                         <p>
                             Написати 
                         </p>
                     </div>
-                    <div className='text'>
+                    <div className='mainPageFooterText'>
                         <p>
                             presspoint.gmail.com
                         </p>
                     </div>
                 </div>
-                <div className='number'>
-                    <div className='titel'>
+                <div className='mainPageFooterNumber'>
+                    <div className='titmainPageFooterTitleel'>
                         <p>
                             Подзвонити 
                         </p>
                     </div>
-                    <div className='text'>
+                    <div className='mainPageFooterText'>
                         <p>
                             +38 012 345 6789
                         </p>

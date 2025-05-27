@@ -8,15 +8,15 @@ export default function PersonalAccountDataContainer()
         <div className='personalAccountNameBox'>
             <p className='personalAccountTitel'>Профіль</p>
             <div className='personalAccountFieldContainer'>
-                <div className='firstNameBox'>
+                <div className='personalAccountFirstNameBox'>
                     <p>Ім'я</p>
                     <FirstAndLastNameReadOnlyField>FirstName</FirstAndLastNameReadOnlyField>
                 </div>
-                <div className='lastNameBox'>
+                <div className='personalAccountLastNameBox'>
                     <p>Прізвище</p>
                     <FirstAndLastNameReadOnlyField>LastName</FirstAndLastNameReadOnlyField>
                 </div>  
-                <div className='email'>
+                <div className='personalAccountEmail'>
                     <p>Пошта</p>
                     <FirstAndLastNameReadOnlyField>Email</FirstAndLastNameReadOnlyField>
                 </div>     

@@ -18,24 +18,24 @@
     justify-content: space-between;
     margin: 50px 0 0 0 ;
 }
-.firstNameBox,
-.lastNameBox,
-.email
+.personalAccountFirstNameBox,
+.personalAccountLastNameBox,
+.personalAccountEmail
 {
     font-size: 46px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;   
 }
-.firstNameBox
+.personalAccountFirstNameBox
 {
     width: 30%;
 }
-.lastNameBox
+.personalAccountLastNameBox
 {
     width: 36%;
 }
-.email
+.personalAccountEmail
 {
     width: 32%;
 }
