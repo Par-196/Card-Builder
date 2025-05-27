@@ -1,13 +1,15 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-export default function FirstAndLastNameField(props) {
+export default function FirstAndLastNameField({ label, value, onChange }) {
   return (
     <Box>
       <TextField
         id="standard-basic"
-        label={props.children}
+        label={label}
         variant="standard"
+        value={value}
+        onChange={onChange}
         InputProps={{
           style: {
             color: 'white',

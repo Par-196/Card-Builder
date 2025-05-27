@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-export default function RegisterPassword() {
+export default function RegisterPassword({ value, onChange }) {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -16,12 +16,12 @@ export default function RegisterPassword() {
   return (
     <FormControl
       sx={{
-        width: 480,    
+        width: 480,
         color: 'white',
         borderBottomColor: 'white',
         '& .MuiInputBase-root': {
           color: 'white',
-          width: 480, 
+          width: 480,
         },
         '& .MuiInput-underline:before': {
           borderBottomColor: 'white',
@@ -48,6 +48,8 @@ export default function RegisterPassword() {
       <Input
         id="standard-adornment-password"
         type={showPassword ? 'text' : 'password'}
+        value={value}
+        onChange={onChange}
         endAdornment={
           <InputAdornment position="end">
             <IconButton
@@ -59,7 +61,6 @@ export default function RegisterPassword() {
             </IconButton>
           </InputAdornment>
         }
-        sx={{ width: 480 }} 
       />
     </FormControl>
   );

@@ -1,14 +1,15 @@
-import { inputBaseClasses } from '@mui/material/InputBase';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
+import { inputBaseClasses } from '@mui/material/InputBase';
 
-export default function RegisterEmail ({ sx = {} }) 
-{
-  return(
+export default function RegisterEmail({ value, onChange }) {
+  return (
     <TextField
       id="standard-suffix-shrink"
       label="Email"
       variant="standard"
+      value={value}
+      onChange={onChange}
       sx={{
         width: 480,
         height: 23,
@@ -29,12 +30,12 @@ export default function RegisterEmail ({ sx = {} })
           borderBottomColor: 'white',
         },
         [`& .${inputBaseClasses.input}`]: {
-          color: 'white',      
+          color: 'white',
           borderRadius: 1,
-          paddingRight: '60px', 
+          paddingRight: '60px',
         },
         '& input': {
-          color: 'white', 
+          color: 'white',
         },
         '& .MuiInputAdornment-root': {
           color: 'white',
@@ -44,25 +45,20 @@ export default function RegisterEmail ({ sx = {} })
           fontSize: '1rem',
         },
       }}
-      slotProps={{
-        htmlInput: {
-          sx: { textAlign: 'right' },
-        },
-        input: {
-          endAdornment: (
-            <InputAdornment
-              position="end"
-              sx={{
-                alignSelf: 'flex-end',
-                margin: 0,
-                marginBottom: '5px',
-              }}
-            >
-              <span color='white'>@gmail.com</span>
-            </InputAdornment>
-          ),
-        },
+      InputProps={{
+        endAdornment: (
+          <InputAdornment
+            position="end"
+            sx={{
+              alignSelf: 'flex-end',
+              margin: 0,
+              marginBottom: '5px',
+            }}
+          >
+            <span color='white'>@gmail.com</span>
+          </InputAdornment>
+        ),
       }}
     />
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-export default function LoginPassword() {
+export default function LoginPassword({ value, onChange }) {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -48,6 +48,8 @@ export default function LoginPassword() {
       <Input
         id="standard-adornment-password"
         type={showPassword ? 'text' : 'password'}
+        value={value}
+        onChange={onChange}
         endAdornment={
           <InputAdornment position="end">
             <IconButton
