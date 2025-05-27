@@ -19,7 +19,7 @@ export default function PersonalAccountButton(props) {
         fontFamily: "'JetBrains Mono', monospace",
         textTransform: 'none',  
       }}
-      onClick={() => navigate("/accountloginpage") }
+      onClick={() => navigate("/login") }
       >{props.children}</Button>
   )
 }

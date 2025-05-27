@@ -16,14 +16,14 @@ public class JwtService : IJwtService
         _configuration = configuration;
     }
 
-    public string GetToken(int id, string username)
+    public string GetToken(int id, string email)
     {
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
 
         var claims = new List<Claim>
         {
             new(ClaimTypes.NameIdentifier, id.ToString()),
-            new(ClaimTypes.Name, username)
+            new(ClaimTypes.Email, email)
         };
         var now = DateTime.UtcNow;
         var jwtToken = new JwtSecurityToken(

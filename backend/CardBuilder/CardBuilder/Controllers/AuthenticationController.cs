@@ -24,25 +24,25 @@ namespace CardBuilder.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> LoginAsync([FromBody] AuthenticationViewModel login)
         {
-            var user = await _userManager.FindByNameAsync(login.Username);
+            var user = await _userManager.FindByEmailAsync(login.Email);
             if (user == null || !await _userManager.CheckPasswordAsync(user, login.Password))
                 return BadRequest("Wrong username or password");
 
-            var tokenString = _jwtService.GetToken(user.Id, user.UserName);
+            var tokenString = _jwtService.GetToken(user.Id, user.Email);
 
             return Ok(new { token = tokenString });
         }
 
         [HttpPost("register")]
         [AllowAnonymous]
-        public async Task<IActionResult> RegisterAsync([FromBody] AuthenticationViewModel model)
+        public async Task<IActionResult> RegisterAsync([FromBody] RegisterViewModel model)
         {
-            var user = await _userManager.FindByNameAsync(model.Username);
+            var user = await _userManager.FindByEmailAsync(model.Email);
 
             if (user != null)
                 return BadRequest("User exists");
 
-            var newUser = new User { UserName = model.Username };
+            var newUser = new User { Email = model.Email, UserName = model.Email};
             var result = await _userManager.CreateAsync(newUser, model.Password);
 
             if (!result.Succeeded)

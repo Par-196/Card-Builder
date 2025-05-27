@@ -5,16 +5,20 @@ import MainPage from './Pages/MainPage/MainPage.jsx'
 import AccountLoginPage from './Pages/AccountLoginPage/AccountLoginPage.jsx'
 import AccountRegistrationPage from './Pages/AccountRegistrationPage/AccountRegistrationPage.jsx'
 import PersonalAccountPage from './Pages/PersonalAccountPage/PersonalAccountPage.jsx'
+import AuthVerify from './services/authService/authService.js'
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route path="/" element={<MainPage />} />
-        <Route path='/personalaccountpage' element={<PersonalAccountPage/> }/>
-      </Route>
-      <Route path="/accountloginpage" element={<AccountLoginPage />} />
-      <Route path='/accountregistrationpage' element={<AccountRegistrationPage />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route path="/" element={<MainPage />} />
+          <Route path='/account' element={<PersonalAccountPage/> }/>
+        </Route>
+        <Route path="/login" element={<AccountLoginPage />} />
+        <Route path='/registration' element={<AccountRegistrationPage />} />
+      </Routes>
+      <AuthVerify/> 
+    </>
   )
 }

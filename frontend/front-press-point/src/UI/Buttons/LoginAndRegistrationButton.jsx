@@ -1,9 +1,11 @@
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-export default function LoginAndRegistrationButton(props) {
+export default function LoginAndRegistrationButton({ action, data}) {
   const navigate = useNavigate();
-  const buttonText = props.children;
+  const buttonText = action;
+  const apiUrl = 'https://localhost:7117';
 
   return (
     <div>
@@ -25,17 +27,52 @@ export default function LoginAndRegistrationButton(props) {
             borderColor: 'white',
           },
         }}
-        onClick={() => {
+        onClick={async () => {
           if (buttonText === 'Увійти') {
-            navigate('/personalaccountpage');
+            try {
+              const response = await axios.post(`${apiUrl}/auth/login`, {
+                email: data.email,
+                password: data.password,
+              });
+              if (response.status === 200) {
+                const token = response.data.token;
+                localStorage.setItem('token', token);
+                navigate('/account');
+              }
+            } catch (error) {
+              if (error.response) {
+                console.error('Error data:', error.response.data);
+              } else {
+                console.error('Error:', error.message);
+              }
+            }
           } else if (buttonText === 'Реєстрація') {
-            navigate('/accountregistrationpage');
+            navigate('/registration');
           } else if (buttonText === 'Зареєструватися') {
-            navigate('/accountloginpage');
+            try {
+              const response = await axios.post(`${apiUrl}/auth/register`, {
+                email: data.email,
+                password: data.password,
+                firstName: data.firstName,
+                lastName: data.lastName
+              });
+              if (response.status === 200) {
+                const token = response.data.token;
+                localStorage.setItem('token', token);
+                navigate('/account');
+              }
+            } catch (error) {
+              if (error.response) {
+                console.error('Error data:', error.response.data);
+              } else {
+                console.error('Error:', error.message);
+              }
+            }
+            navigate('/login');
           }
         }}
       >
-        {props.children}
+        {buttonText}
       </Button>
     </div>
   );
