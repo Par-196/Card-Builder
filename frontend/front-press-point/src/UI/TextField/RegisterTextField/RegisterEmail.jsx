@@ -1,5 +1,4 @@
 import TextField from '@mui/material/TextField';
-import InputAdornment from '@mui/material/InputAdornment';
 import { inputBaseClasses } from '@mui/material/InputBase';
 
 export default function RegisterEmail({ value, onChange }) {
@@ -33,9 +32,17 @@ export default function RegisterEmail({ value, onChange }) {
           color: 'white',
           borderRadius: 1,
           paddingRight: '60px',
+          backgroundColor: 'transparent',
         },
         '& input': {
           color: 'white',
+          backgroundColor: 'transparent',
+        },
+        '& input:-webkit-autofill': {
+          WebkitBoxShadow: '0 0 0 1000px transparent inset !important',
+          WebkitTextFillColor: 'white !important',
+          backgroundColor: 'transparent !important',
+          transition: 'background-color 9999s ease-in-out 0s',
         },
         '& .MuiInputAdornment-root': {
           color: 'white',
@@ -44,20 +51,6 @@ export default function RegisterEmail({ value, onChange }) {
           fontWeight: 600,
           fontSize: '1rem',
         },
-      }}
-      InputProps={{
-        endAdornment: (
-          <InputAdornment
-            position="end"
-            sx={{
-              alignSelf: 'flex-end',
-              margin: 0,
-              marginBottom: '5px',
-            }}
-          >
-            <span color='white'>@gmail.com</span>
-          </InputAdornment>
-        ),
       }}
     />
   );

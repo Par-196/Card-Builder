@@ -51,15 +51,13 @@ export default function RegisterPassword({ value, onChange }) {
         value={value}
         onChange={onChange}
         endAdornment={
-          <InputAdornment position="end">
-            <IconButton
-              aria-label={showPassword ? 'Hide password' : 'Show password'}
-              onClick={handleClickShowPassword}
-              onMouseDown={handleMouseDownPassword}
-            >
-              {showPassword ? <VisibilityOff /> : <Visibility />}
-            </IconButton>
-          </InputAdornment>
+        <IconButton
+          aria-label={showPassword ? 'Hide password' : 'Show password'}
+          onClick={handleClickShowPassword}
+          onMouseDown={handleMouseDownPassword}
+        >
+          {showPassword ? <Visibility /> : <VisibilityOff />}
+        </IconButton>
         }
       />
     </FormControl>
