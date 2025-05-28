@@ -7,6 +7,7 @@ import AccountRegistrationPage from './Pages/AccountRegistrationPage/AccountRegi
 import PersonalAccountPage from './Pages/PersonalAccountPage/PersonalAccountPage.jsx'
 import ProductСatalogPage from  './Pages/ProductСatalogPage/ProductСatalogPage.jsx'
 import InformationAboutUsPage from './Pages/InformationAboutUsPage/InformationAboutUsPage.jsx'
+import ProductPage from './Pages/ProductPage/ProductPage.jsx'
 import AuthVerify from './services/authService/authService.js'
 
 export default function App() {
@@ -17,9 +18,10 @@ export default function App() {
           <Route path='/account' element={<PersonalAccountPage/> }/>
           <Route path='/catalog' element={<ProductСatalogPage/>}/>
           <Route path="/about" element={<InformationAboutUsPage />} />
+          <Route path="/product" element={<ProductPage />} />
         </Route>
         <Route path="/login" element={<AccountLoginPage />} />
-        <Route path='/registration' element={<AccountRegistrationPage />} />
+        <Route path="/registration" element={<AccountRegistrationPage />} />
       </Routes>
   )
 }
