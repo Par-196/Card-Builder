@@ -12,20 +12,20 @@ export default function RegistrationForm() {
   const [password, setPassword] = useState('');
 
   return (
-    <div className='registrationFormBody'>
-      <div className='registrationFormTitel'>
+    <div className='registration-form-body'>
+      <div className='registration-form-title'>
         <p>Реєстрація</p>
       </div>
-      <div className='registrationFormFieldContainer'>
-        <div className='registrationNameContainer'>
-          <div className='registrationFirstName'>
+      <div className='registration-form-field-container'>
+        <div className='registration-name-container'>
+          <div>
             <FirstAndLastNameField
               label="Ім'я"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
-          <div className='registrationSecondName'>
+          <div>
             <FirstAndLastNameField
               label="Прізвище"
               value={lastName}
@@ -33,15 +33,15 @@ export default function RegistrationForm() {
             />
           </div>
         </div>
-        <div className='registrationEmail'>
+        <div className='registration-email'>
           <RegisterEmail value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        <div className='registrationPassword'>
+        <div className='registration-password'>
           <RegisterPassword value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
       </div>
-      <div className='registrationFormButtonContainer'>
-        <div className='registrationFormFirstButton'>
+      <div className='registration-form-button-container'>
+        <div className='registration-form-first-button'>
           <LoginAndRegistrationButton
             action="Зареєструватися"
             data={{ firstName, lastName, email, password }}

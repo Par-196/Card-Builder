@@ -10,7 +10,7 @@
   flex-shrink: 0;
   align-self: flex-start;
 }
-.logo
+.header-logo
 {
   justify-self: flex-start;
   padding-left: 100px ;
@@ -18,7 +18,7 @@
   font-weight: 780;
   color: white;
 } 
-.accountButton
+.header-account-button
 {
   margin-left: auto;
   padding-right: 100px;

@@ -5,7 +5,7 @@ import RegistrationForm from '../../Components/RegistrationForm/RegistrationForm
 export default function AccountRegistrationPage()
 {
     return(
-        <div className='fieldBox'>
+        <div className='account-registration-page-field-box'>
             <RegistrationForm />
         </div>
     )

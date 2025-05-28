@@ -6,7 +6,7 @@ import OrderList from '../../Components/OrdersList/OrdersList.jsx'
 export default function PersonalAccountPage() 
 {
     return (
-        <div className='personalAccountComponents'>
+        <div className='personal-account-components'>
             <div>
                 <PersonalAccountDataContainer></PersonalAccountDataContainer>
             </div>

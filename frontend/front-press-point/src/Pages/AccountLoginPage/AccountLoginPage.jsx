@@ -5,7 +5,7 @@ import LoginForm from '../../Components/LoginForm/LoginForm.jsx'
 export default function AccountLoginPage()
 {
     return(
-        <div className='fieldBox'>
+        <div className='account-login-page-field-box'>
             <LoginForm />
         </div>
     )

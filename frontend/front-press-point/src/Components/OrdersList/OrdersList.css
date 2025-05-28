@@ -1,15 +1,15 @@
-.ordersListContainer
+.orders-list-container
 {
     width: 100%;
     margin: 75px 100px 0 100px ;
 }
-.ordersListContainerTitle
+.orders-list-container-title
 {
     width: calc(100% - 200px);
     height: 50px;
     font-size: 48px;
 }
-.orderListBox
+.order-list-box
 {
     width: calc(100% - 200px);
     margin-top: 50px;

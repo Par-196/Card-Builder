@@ -1,4 +1,4 @@
-.contentBlock
+.main-page-content-block
 {
     width: 100%;
     height: 520px ;
@@ -6,25 +6,25 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.leftContainer
+.main-page-left-container
 {
     width: 640px;
     height: 282px;
     padding-left: 100px;
     padding-top: 130px;
 }
-.rightContainer
+.main-page-right-container
 {
     width: 520px;
     height: 520px;
     padding-right: 100px;
 }
-.sloganBlock 
+.main-page-slogan-block 
 {   
     width: 100%;
     height: 160px;
 }
-.slogan
+.main-page-slogan
 {
     font-size: 68px;
     font-weight: 800px;
@@ -32,7 +32,7 @@
     color: #ffffff;
     opacity: 0.9;
 }
-.mainPageButtonBlock
+.main-page-button-block
 {
     width: 100%;
     height: 140px;
@@ -40,8 +40,8 @@
     align-items: flex-end;
     justify-content: space-between;
 }
-.productButton, 
-.aboutUsButton
+.main-page-product-button, 
+.main-page-about-us-button
 {
     width: 270px;
     height: 70px;

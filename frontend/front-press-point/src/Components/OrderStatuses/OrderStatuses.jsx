@@ -10,18 +10,18 @@ export default function OrderStatuses() {
   ];
 
   return (
-    <div className='orderStatusesContainer'>
-      <div className='orderStatusesContainerTitle'>
+    <div className='order-statuses-container'>
+      <div className='order-statuses-container-title'>
         <p>Статуси замовлення</p>
       </div>
 
-      <div className='orderStatusesBox'>
+      <div className='order-statuses-box'>
         {orderStatuses.map((status, index) => (
-          <div className='orderStatusesItem' key={index}>
-            <div className='orderStatusesBoxTitle'>
+          <div className='order-statuses-item' key={index}>
+            <div className='order-statuses-box-title'>
               <p>{status.title}</p>
             </div>
-            <div className='orderStatusesBoxContent'>
+            <div className='order-statuses-box-content'>
               <p>{status.description}</p>
             </div>
           </div>

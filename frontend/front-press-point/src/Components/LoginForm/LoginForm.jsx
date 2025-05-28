@@ -9,23 +9,23 @@ export default function LoginForm() {
   const [password, setPassword] = useState('');
 
   return (
-    <div className='loginFormBody'>
-      <div className='loginFormTitel'>
+    <div className='login-form-body'>
+      <div className='login-form-title'>
         <p>Вхід</p>
       </div>
-      <div className='loginFormFieldContainer'>
-        <div className='LoginEmail'>
+      <div className='login-form-field-container'>
+        <div className='login-email'>
           <LoginEmail value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        <div className='loginPassword'>
+        <div className='login-password'>
           <LoginPassword value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
       </div>
-      <div className='loginFormButtonContainer'>
-        <div className='loginFormFirstButton'>
+      <div className='login-form-button-container'>
+        <div className='login-form-first-button'>
           <LoginAndRegistrationButton action="Увійти" data={{ email, password }} />
         </div>
-        <div className='loginFormSecondButton'>
+        <div className='login-form-second-button'>
           <LoginAndRegistrationButton action="Реєстрація" data={{ email, password }} />
         </div>
       </div>

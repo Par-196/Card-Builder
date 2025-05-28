@@ -5,11 +5,11 @@ export default function OrdersList()
 {
     return (
         <div>
-            <div className='ordersListContainer'>
-                <div className='ordersListContainerTitle'>
+            <div className='orders-list-container'>
+                <div className='orders-list-container-title'>
                     <p>Ваші замовлення</p>
                 </div>
-                <div className='orderListBox'>
+                <div className='order-list-box'>
                     <OrderListDataGrid></OrderListDataGrid>
                 </div>
             </div>

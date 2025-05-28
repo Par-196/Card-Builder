@@ -1,16 +1,16 @@
-.personalAccountNameBox
+.personal-account-name-box
 {
     width: calc(100% - 200px);
     height: 165px ;
     margin: 50px 100px 0 100px ;
 }
-.personalAccountTitel
+.personal-account-title
 {
     width: 100%;
     height: 56px;
     font-size: 48px;
 }
-.personalAccountFieldContainer
+.personal-account-field-container
 {
     width: 100%;
     display: flex;
@@ -18,24 +18,24 @@
     justify-content: space-between;
     margin: 50px 0 0 0 ;
 }
-.personalAccountFirstNameBox,
-.personalAccountLastNameBox,
-.personalAccountEmail
+.personal-account-first-name-box,
+.personal-account-last-name-box,
+.personal-account-email
 {
     font-size: 46px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;   
 }
-.personalAccountFirstNameBox
+.personal-account-first-name-box
 {
     width: 30%;
 }
-.personalAccountLastNameBox
+.personal-account-last-name-box
 {
     width: 36%;
 }
-.personalAccountEmail
+.personal-account-email
 {
     width: 32%;
 }

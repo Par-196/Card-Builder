@@ -5,7 +5,7 @@ import './MainLayout.css'
 export default function MainLayout()
 {
     return (
-        <div className='page'>
+        <div className='main-layout-page'>
             <Header /> 
             <main>
                 <Outlet />

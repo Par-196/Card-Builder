@@ -5,11 +5,11 @@ import './MainPage.css'
 export default function MainPage() 
 {
     return(
-        <div className="mainPageComponents">
-            <div className="mainPageContent">
+        <div className="main-page-components">
+            <div className="main-page-content">
                 <MainPageContent />
             </div>
-            <div className="mainPageFooter">
+            <div>
                 <MainPageFooter />
             </div>
         </div>
