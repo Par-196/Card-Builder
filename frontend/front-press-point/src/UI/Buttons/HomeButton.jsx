@@ -8,7 +8,7 @@ export default function HomeButton(props)
         <div>
             <Button variant="outlined"
             sx={{
-                width: '150px',
+                width: '120px',
                 height: '50px',
                 color: 'white',
                 borderColor: 'white',
