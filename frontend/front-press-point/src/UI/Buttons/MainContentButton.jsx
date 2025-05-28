@@ -16,7 +16,6 @@ export default function MainContentButton(props)
             fontFamily: 'JetBrains Mono, monospace',
             textTransform: 'none',
             boxShadow: '2px 2px 0px rgba(0, 0, 0, 0.5)',
-        }}>
-        {props.children}</Button>
+        }}>{props.children}</Button>
     )
 }
