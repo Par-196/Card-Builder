@@ -7,7 +7,7 @@ export default function AccountLoginPage()
     return(
         <div className='account-login-page-container'>
             <div className='account-login-page-home-button'>
-                <HomeButton>Назад</HomeButton>
+                <HomeButton>Головна</HomeButton>
             </div>
             <div className='account-login-page-login-form'>
                 <LoginForm />

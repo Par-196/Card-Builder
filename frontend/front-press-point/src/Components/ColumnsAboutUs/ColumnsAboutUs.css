@@ -1,0 +1,66 @@
+.columns-about-us-container
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.columns-about-us-fisrt-container,
+.columns-about-us-second-container,
+.columns-about-us-third-container
+{
+    width: 500px;
+    height: 750px;
+    position: relative;
+}
+.columns-about-us-fisrt-container
+{
+    background: url('../../assets/img/AboutUsPage/WhyUs.jpg');
+    background-size: cover;
+}
+.columns-about-us-second-container
+{
+    background: url('../../assets/img/AboutUsPage/AboutUs.jpg');
+    background-size: cover;
+}
+.columns-about-us-third-container
+{
+    background: url('../../assets/img/AboutUsPage/TechnologiesAndMaterials.jpg');
+    background-size: cover;  
+}
+.columns-about-us-title
+{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    font-size: 20px;
+    line-height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.columns-about-us-text
+{
+    position: absolute;
+    top: 0px;
+    font-size: 20px;
+    line-height: 53px;
+    margin: 70px 30px 0 30px;
+}
+.columns-about-us-box 
+{ 
+    width: calc(100% - 70px);
+    height: calc(100% - 70px);
+    margin: 70px 30px 0 30px;
+}
+.columns-about-us-black-line
+{
+    width: 440px;
+    border: none;
+    height: 1px;
+    background-color: black;
+    margin: 52px 0 0 0; 
+}

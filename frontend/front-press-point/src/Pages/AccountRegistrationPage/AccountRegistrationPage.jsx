@@ -7,7 +7,7 @@ export default function AccountRegistrationPage()
     return(
         <div className='account-registration-page-container'>
             <div className='account-registration-page-home-button'>
-                <HomeButton>Назад</HomeButton>
+                <HomeButton>Головна</HomeButton>
             </div>
             <div className='account-registration-page-field-box'>
                 <RegistrationForm />

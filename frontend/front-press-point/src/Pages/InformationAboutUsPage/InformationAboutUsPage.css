@@ -1,4 +1,8 @@
-.information-about-us-page-container
+.information-about-us-page-container 
 {
-    
+  height: calc(100vh - 120px);
+  display: flex;
+  background: url('../../assets/img/AboutUsPage/AboutUsBack.jpg');
+  background-size: cover;
+  background-position: center -120px;
 }
