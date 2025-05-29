@@ -1,7 +1,7 @@
-import RegisterPassword from '../../UI/TextField/RegisterTextField/RegisterPassword.jsx';
-import RegisterEmail from '../../UI/TextField/RegisterTextField/RegisterEmail.jsx';
-import LoginAndRegistrationButton from '../../UI/Buttons/LoginAndRegistrationButton.jsx';
-import FirstAndLastNameField from '../../UI/TextField/FirstAndLastNameField.jsx';
+import RegisterPassword from '../../ui/textField/registerTextField/registerPassword.jsx';
+import RegisterEmail from '../../ui/textField/registerTextField/registerEmail.jsx';
+import LoginAndRegistrationButton from '../../ui/buttons/loginAndRegistrationButton.jsx';
+import FirstAndLastNameField from '../../ui/textField/firstAndLastNameField.jsx';
 import './RegistrationForm.css';
 import { useState } from 'react';
 

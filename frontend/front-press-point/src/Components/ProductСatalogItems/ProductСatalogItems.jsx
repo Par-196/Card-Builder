@@ -29,7 +29,7 @@ export default function ProductCatalogItems() {
         <div className='product-catalog-items-box'>
             {productCatalogItems.map((item, index) => (
             <div key={index} className='product-catalog-items'
-            onClick={() => navigate('/product', {state: item}) }
+            onClick={() => navigate('/product', {state: item.title}) }
             style={{ cursor: 'pointer' }}
             >
                 <div className='product-catalog-items-image'>

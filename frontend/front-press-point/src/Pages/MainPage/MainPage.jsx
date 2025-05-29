@@ -1,5 +1,5 @@
-import MainPageContent from "../../Components/MainPageContent/MainPageContent"
-import MainPageFooter from "../../Components/MainPageFooter/MainPageFooter"
+import MainPageContent from "../../components/mainPageContent/MainPageContent"
+import MainPageFooter from "../../components/mainPageFooter/MainPageFooter"
 import './MainPage.css'
 
 export default function MainPage() 

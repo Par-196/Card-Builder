@@ -1,6 +1,6 @@
-import MainContentButton from '../../UI/Buttons/MainContentButton'
+import MainContentButton from '../../ui/buttons/mainContentButton'
 import './MainPageContent.css'
-import CircularVideo from '../../UI/Buttons/CircularVideo'
+import CircularVideo from '../../ui/buttons/circularVideo'
 
 export default function MainPageContent()
 {

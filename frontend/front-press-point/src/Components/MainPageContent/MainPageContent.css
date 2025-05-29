@@ -4,6 +4,7 @@
     height: 520px ;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .main-page-left-container

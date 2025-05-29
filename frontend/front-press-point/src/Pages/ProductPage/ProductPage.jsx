@@ -1,25 +1,30 @@
-import './ProductPage.css'
 import { useLocation } from 'react-router-dom'
+import ProductNavigationMenu from '../../components/productNavigationMenu/ProductNavigationMenu.jsx'
+import './ProductPage.css'
 
 export default function ProductPage() {
   const location = useLocation()
-  const item = location.state 
+  const productTitle = location.state
 
-  if (!item) {
-    return <div>Нічого не вибрано</div>
-  }
+  
+  const selectedItem = arrayItems.find(item => item.title === productTitle)
 
   return (
     <div className="product-page-container">
-      <h1 className="product-page-title">{item.title}</h1>
-      {item.image && (
-        <img
-          src={item.image}
-          alt={item.title}
-          width={400}
-          className="product-page-image"
-        />
-      )}
+      <ProductNavigationMenu selectedProduct={productTitle} />
+      
+      <div className='product-page-box'>
+        {selectedItem ? (
+          <div className='product-page-items'>
+            <img src={selectedItem.image} alt={selectedItem.title} width={400} />
+            <p>{selectedItem.title}</p>
+            <p>{selectedItem.shortDescription}</p>
+            <p>{selectedItem.description}</p>
+          </div>
+        ) : (
+          <p>Продукт не знайдено.</p>
+        )}
+      </div>
     </div>
   )
 }

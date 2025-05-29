@@ -1,6 +1,6 @@
 import './AccountLoginPage.css'
-import LoginForm from '../../Components/LoginForm/LoginForm.jsx'
-import HomeButton from '../../UI/Buttons/HomeButton.jsx'
+import LoginForm from '../../components/loginForm/LoginForm.jsx'
+import HomeButton from '../../ui/buttons/HomeButton.jsx'
 
 export default function AccountLoginPage()
 {

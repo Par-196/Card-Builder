@@ -1,5 +1,5 @@
 import './InformationAboutUsPage.css'
-import ColumnsAboutUs from '../../Components/ColumnsAboutUs/ColumnsAboutUs.jsx'
+import ColumnsAboutUs from '../../components/columnsAboutUs/ColumnsAboutUs.jsx'
 
 export default function InformationAboutUsPage()
 {

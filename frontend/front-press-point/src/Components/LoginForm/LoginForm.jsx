@@ -1,6 +1,6 @@
-import LoginPassword from '../../UI/TextField/LoginTextField/LoginPassword.jsx';
-import LoginEmail from '../../UI/TextField/LoginTextField/LoginEmail.jsx';
-import LoginAndRegistrationButton from '../../UI/Buttons/LoginAndRegistrationButton.jsx';
+import LoginPassword from '../../ui/textField/loginTextField/loginPassword.jsx';
+import LoginEmail from '../../ui/textField/loginTextField/loginEmail.jsx';
+import LoginAndRegistrationButton from '../../ui/buttons/loginAndRegistrationButton.jsx';
 import './LoginForm.css';
 import { useState } from 'react';
 

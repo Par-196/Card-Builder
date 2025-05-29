@@ -1,5 +1,5 @@
 import './Header.css'
-import PersonalAccountButton from '../../UI/Buttons/PersonalAccountButton'
+import PersonalAccountButton from '../../ui/buttons/personalAccountButton.jsx'
 import { useNavigate } from 'react-router-dom'
 
 export default function Header () {

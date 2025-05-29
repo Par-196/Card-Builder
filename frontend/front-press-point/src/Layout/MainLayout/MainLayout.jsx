@@ -1,4 +1,4 @@
-import Header from '../../Components/Header/Header.jsx'
+import Header from '../../components/header/Header.jsx'
 import {Outlet} from 'react-router-dom'
 import './MainLayout.css'
 

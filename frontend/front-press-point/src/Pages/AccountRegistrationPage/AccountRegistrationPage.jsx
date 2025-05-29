@@ -1,6 +1,6 @@
 import './AccountRegistrationPage.css'
-import RegistrationForm from '../../Components/RegistrationForm/RegistrationForm.jsx'
-import HomeButton from '../../UI/Buttons/HomeButton.jsx'
+import RegistrationForm from '../../components/registrationForm/RegistrationForm.jsx'
+import HomeButton from '../../ui/buttons/HomeButton.jsx'
 
 export default function AccountRegistrationPage()
 {

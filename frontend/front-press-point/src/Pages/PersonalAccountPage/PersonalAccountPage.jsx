@@ -1,7 +1,7 @@
 import './PersonalAccountPage.css'
-import PersonalAccountDataContainer from '../../Components/PersonalAccountDataContainer/PersonalAccountDataContainer.jsx'
-import OrderStatuses from '../../Components/OrderStatuses/OrderStatuses.jsx'
-import OrderList from '../../Components/OrdersList/OrdersList.jsx'
+import PersonalAccountDataContainer from '../../components/personalAccountDataContainer/PersonalAccountDataContainer.jsx'
+import OrderStatuses from '../../components/orderStatuses/OrderStatuses.jsx'
+import OrderList from '../../components/ordersList/OrdersList.jsx'
 
 export default function PersonalAccountPage() 
 {

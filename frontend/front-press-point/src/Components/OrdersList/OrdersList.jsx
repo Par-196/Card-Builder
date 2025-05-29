@@ -1,5 +1,5 @@
 import './OrdersList.css'
-import OrderListDataGrid from '../../UI/DataGrid/OrderListDataGrid'
+import OrderListDataGrid from '../../ui/dataGrid/orderListDataGrid'
 
 export default function OrdersList()
 {

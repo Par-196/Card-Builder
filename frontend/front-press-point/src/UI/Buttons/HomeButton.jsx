@@ -11,7 +11,6 @@ export default function HomeButton(props)
                 width: '120px',
                 height: '50px',
                 color: 'white',
-                borderColor: 'white',
                 borderRadius: '12px',
                 fontSize: '20px',
                 fontWeight: 500,
@@ -21,7 +20,7 @@ export default function HomeButton(props)
                 borderColor: 'rgba(255, 255, 255, 0.3)',
                 '&:hover': {
                     backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                    borderColor: 'rgb(255, 255, 255)',
+                    borderColor: 'rgba(255, 255, 255, 0.86)',
                 },
             }}
             onClick={() => navigate("/")}

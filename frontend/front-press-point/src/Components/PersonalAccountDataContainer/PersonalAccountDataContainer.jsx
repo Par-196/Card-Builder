@@ -1,5 +1,5 @@
 import './PersonalAccountDataContainer.css'
-import FirstAndLastNameReadOnlyField from '../../UI/TextField/FirstAndLastNameReadOnlyField.jsx'
+import FirstAndLastNameReadOnlyField from '../../ui/textField/firstAndLastNameReadOnlyField.jsx'
 
 
 export default function PersonalAccountDataContainer()
