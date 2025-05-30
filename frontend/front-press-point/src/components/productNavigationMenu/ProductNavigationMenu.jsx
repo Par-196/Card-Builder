@@ -1,5 +1,5 @@
 import './ProductNavigationMenu.css'
-import NavigationButtons from '../../ui/buttons/navigationButtons'
+import NavigationButtons from '../../ui/buttons/NavigationButtons'
 
 export default function ProductNavigationMenu() 
 {
@@ -7,20 +7,12 @@ export default function ProductNavigationMenu()
         <div className='product-navigation-menu-container'>
             <NavigationButtons>Листівка</NavigationButtons>
             <NavigationButtons>Буклет</NavigationButtons>
-            <NavigationButtons>Блокноти</NavigationButtons>
-            <NavigationButtons>Візитки</NavigationButtons>
-            <NavigationButtons>Постери</NavigationButtons>
-            <NavigationButtons>Бірки</NavigationButtons>
-            <NavigationButtons>Конверти</NavigationButtons>
-            <NavigationButtons>Флаєри</NavigationButtons>
+            <NavigationButtons>Блокнот</NavigationButtons>
+            <NavigationButtons>Візитка</NavigationButtons>
+            <NavigationButtons>Постер</NavigationButtons>
+            <NavigationButtons>Бірка</NavigationButtons>
+            <NavigationButtons>Конверт</NavigationButtons>
+            <NavigationButtons>Флаєр</NavigationButtons>
         </div>
     )
 }
-// Листівка
-// Буклет
-// Блокноти
-// Візитки
-// Постери
-// Бірки
-// Конверти
-// Флаєри

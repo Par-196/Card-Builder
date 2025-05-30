@@ -13,12 +13,12 @@ export default function ProductCatalogItems() {
   const productCatalogItems = [
     { title: 'Листівка', image: Postcard },
     { title: 'Буклет', image: Booklet },
-    { title: 'Блокноти', image: Notebook },
-    { title: 'Візитки', image: BusinessCard },
-    { title: 'Постери', image: Posters },
-    { title: 'Бірки', image: Tag },
-    { title: 'Конверти', image: Envelope },
-    { title: 'Флаєри', image: Flyers },
+    { title: 'Блокнот', image: Notebook },
+    { title: 'Візитка', image: BusinessCard },
+    { title: 'Постер', image: Posters },
+    { title: 'Бірка', image: Tag },
+    { title: 'Конверт', image: Envelope },
+    { title: 'Флаєр', image: Flyers },
   ]
 
   const navigate = useNavigate()

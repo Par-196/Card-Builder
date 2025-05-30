@@ -1,0 +1,31 @@
+.product-description-container
+{
+    width: calc(100% - 730px);
+    margin: 0 365px 0 365px;
+}
+.product-description-title-box
+{
+    width: 100%;
+    height: auto;
+}
+.product-description-title
+{
+    width: 100%;
+    font-size: 48px;
+    margin-top: 40px;
+    text-align: justify;
+}
+.product-description-paragraph-box
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.product-description-paragraph
+{
+    width: 100%;
+    font-size: 24px;
+    margin-top: 40px;
+    text-align: justify;
+}

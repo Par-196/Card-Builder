@@ -1,11 +1,13 @@
 .product-navigation-menu-container
 {
-    width: calc(100% - 640px);
+    width: calc(100% - 722px);
     height: 76px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     border-radius: 20px;
     background-color: #242424;
-    margin: 25px 320px 0 320px ;
+    margin: 25px 411px 0 311px ;
+    padding: 0 50px 0 50px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
 }
