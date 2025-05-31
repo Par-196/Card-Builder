@@ -3,22 +3,33 @@ import TextField from '@mui/material/TextField';
 
 export default function TotalPriceTextField() {
   return (
-    <Box
-      component="form"
-      sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
-      noValidate
-      autoComplete="off"
-    >
-      <div><TextField
-          id="outlined-read-only-input"
-          label="Read Only"
-          defaultValue="Hello World"
-          slotProps={{
-            input: {
-              readOnly: true,
-            },
-          }}
-        /> </div>
+    <Box component="form" noValidate autoComplete="off">
+      <TextField
+        
+        variant="standard" 
+        value="00000000.00"
+        sx={{
+          width: '200px',
+          height: '50px',
+          borderColor: 'black',
+          borderRadius: '10px',
+          input: {
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: '32px',
+            height: '50px',
+            padding: '0', 
+          },
+          '& .MuiInput-underline:before': {
+            borderBottom: '1px solid gray',
+          },
+          '& .MuiInput-underline:hover:before': {
+            borderBottom: '2px solid black',
+          },
+          '& .MuiInput-underline:after': {
+            borderBottom: '2px solid black',
+          },
+        }}
+      />
     </Box>
   );
 }

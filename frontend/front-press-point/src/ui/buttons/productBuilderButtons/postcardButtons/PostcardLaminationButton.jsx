@@ -18,7 +18,7 @@ export default function PostcardLaminationButton() {
           key={label}
           onClick={() => handleClick(label)}
           sx={{
-            width: 100,
+            width: 135,
             height: 50,
             fontSize: 18,
             fontWeight: 600,

@@ -7,11 +7,33 @@ export default function NumberOfUnitsOfProduct() {
   return (
     <Box
       component="form"
-      sx={{ '& > :not(style)': { m: 1 } }}
       noValidate
       autoComplete="off"
+      sx={{
+        '& > :not(style)': {
+          m: 0,
+        },
+      }}
     >
-      <Input placeholder="Placeholder" inputProps={ariaLabel} />
+      <Input
+        placeholder="Введіть цифру"
+        inputProps={ariaLabel}
+        sx={{
+          width: '200px',
+          height: '50px',
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: '20px',
+          '&:before': {
+            borderBottom: '1px solid gray',
+          },
+          '&:after': {
+            borderBottom: '2px solid black',
+          },
+          '&:hover:not(.Mui-disabled):before': {
+            borderBottom: '2px solid black',
+          },
+        }}
+      />
     </Box>
   );
 }

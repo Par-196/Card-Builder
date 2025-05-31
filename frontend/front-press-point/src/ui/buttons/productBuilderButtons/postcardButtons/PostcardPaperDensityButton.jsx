@@ -18,7 +18,7 @@ export default function PostcardPaperDensityButton() {
           key={label}
           onClick={() => handleClick(label)}
           sx={{
-            width: 100,
+            width: 120,
             height: 50,
             fontSize: 18,
             fontWeight: 600,
