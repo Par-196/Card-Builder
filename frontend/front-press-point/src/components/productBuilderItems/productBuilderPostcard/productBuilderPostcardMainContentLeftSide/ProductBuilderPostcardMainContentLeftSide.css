@@ -1,0 +1,23 @@
+.product-builder-postcard-main-content-left-side-container
+{
+    width: 449px;
+    height: 643px;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.product-builder-postcard-main-content-left-side-container-left-buttons-box
+{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.product-builder-postcard-main-content-left-side-container-right-contant-box
+{
+    width: 349px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
