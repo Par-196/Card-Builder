@@ -20,6 +20,7 @@ export default function NavigationButtons(props) {
         textTransform: 'none',  
       }}
       onClick={() => navigate("/product", { state: props.children })}
+      
       >{props.children}</Button>
   )
 }
