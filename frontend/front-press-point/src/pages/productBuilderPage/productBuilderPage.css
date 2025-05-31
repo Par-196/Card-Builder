@@ -1,0 +1,12 @@
+.product-builder-postcard-container
+{
+    width: 100%;
+    height: 643px;
+}
+.product-builder-postcard-main-content-box
+{
+    width: 100%;
+    height: 643px;
+    display: flex;
+    flex-direction: row;
+}
