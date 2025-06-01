@@ -6,7 +6,7 @@ import ProductBuilderOrderButton from '../../../../ui/buttons/productBuilderButt
 import { useLocation } from 'react-router-dom';
 
 
-export default function ProductBuilderPostcardHeaderBar( {format, setFormat, print, setPrint } )
+export default function ProductBuilderPostcardHeaderBar( {format, setFormat, print, setPrint, orderData, onCreateOrder } )
 {
     const location = useLocation();
 
@@ -39,7 +39,7 @@ export default function ProductBuilderPostcardHeaderBar( {format, setFormat, pri
                     </div>
                 </div>
                 <div className="product-builder-postcard-header-buttons-builder-order">
-                    <ProductBuilderOrderButton />
+                    <ProductBuilderOrderButton orderData={orderData} onCreateOrder={onCreateOrder}/>
                 </div>
             </div>
         </div>

@@ -20,24 +20,27 @@ import AuthVerify from './services/authService/authService.js'
 
 export default function App() {
   return (
+    <>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route path="/" element={<MainPage />} />
-          <Route path='/account' element={<PersonalAccountPage /> }/>
-          <Route path='/catalog' element={<ProductСatalogPage />}/>
-          <Route path="/about" element={<InformationAboutUsPage />} />
-          <Route path="/product" element={<ProductPage />} />
-          <Route path="/postcardbuilder" element={<ProductBuilderPostcardPage />} />
-          <Route path="/bookletbuilder" element={<ProductBuilderBookletPage />} />
-          <Route path="/notepadbuilder" element={<ProductBuilderNotepadPage />} />
-          <Route path="/businesscardbuilder" element={<ProductBuilderBusinessCardPage />} />
-          <Route path="/posterbuilder" element={<ProductBuilderPosterPage />} />
-          <Route path="/tagbuilder" element={<ProductBuilderTagPage />} />
-          <Route path="/envelopebuilder" element={<ProductBuilderEnvelopePage />} />
-          <Route path="/flyerbuilder" element={<ProductBuilderFlyerPage />} />
-        </Route>
-        <Route path="/login" element={<AccountLoginPage />} />
-        <Route path="/registration" element={<AccountRegistrationPage />} />
-      </Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route path="/" element={<MainPage />} />
+            <Route path='/account' element={<PersonalAccountPage /> }/>
+            <Route path='/catalog' element={<ProductСatalogPage />}/>
+            <Route path="/about" element={<InformationAboutUsPage />} />
+            <Route path="/product" element={<ProductPage />} />
+            <Route path="/postcardbuilder" element={<ProductBuilderPostcardPage />} />
+            <Route path="/bookletbuilder" element={<ProductBuilderBookletPage />} />
+            <Route path="/notepadbuilder" element={<ProductBuilderNotepadPage />} />
+            <Route path="/businesscardbuilder" element={<ProductBuilderBusinessCardPage />} />
+            <Route path="/posterbuilder" element={<ProductBuilderPosterPage />} />
+            <Route path="/tagbuilder" element={<ProductBuilderTagPage />} />
+            <Route path="/envelopebuilder" element={<ProductBuilderEnvelopePage />} />
+            <Route path="/flyerbuilder" element={<ProductBuilderFlyerPage />} />
+          </Route>
+          <Route path="/login" element={<AccountLoginPage />} />
+          <Route path="/registration" element={<AccountRegistrationPage />} />
+        </Routes>
+        <AuthVerify/>
+    </>
   )
 }

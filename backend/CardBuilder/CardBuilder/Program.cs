@@ -1,7 +1,10 @@
 ﻿using System.Security.Claims;
 using System.Text;
+using System.Text.Json.Serialization;
+using System.Text.Json;
 using CardBuilder.BLL.Services.JwtService;
 using CardBuilder.BLL.Services.JwtService.Interfaces;
+using CardBuilder.BLL.Services.OrderService;
 using CardBuilder.DAL.Context;
 using CardBuilder.DAL.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -53,9 +56,14 @@ public class Program
         builder.Services.AddTransient<ClaimsPrincipal>(s =>
             s.GetService<IHttpContextAccessor>().HttpContext.User);
 
-        builder.Services.AddControllers();
+        builder.Services.AddControllers().AddJsonOptions(options =>
+        {
+            options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
+            options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+        }); ;
 
         builder.Services.AddScoped<IJwtService, JwtService>();
+        builder.Services.AddScoped<IOrderService, OrderService>();
 
         builder.Services.AddCors(options =>
         {

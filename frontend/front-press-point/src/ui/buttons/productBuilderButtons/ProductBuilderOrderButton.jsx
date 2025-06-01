@@ -1,9 +1,13 @@
 import Button from '@mui/material/Button';
 
-export default function ProductBuilderOrderButton() {
+export default function ProductBuilderOrderButton({ orderData, onCreateOrder }) {
+  const handleClick = () => {
+    onCreateOrder(orderData);
+  };
   return (
     <Button
       variant="contained"
+      onClick={handleClick}
       sx={{
         width: 270,
         height: 60,

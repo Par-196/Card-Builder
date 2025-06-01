@@ -1,4 +1,5 @@
-﻿using CardBuilder.BLL.Services.JwtService.Interfaces;
+﻿using System.Security.Claims;
+using CardBuilder.BLL.Services.JwtService.Interfaces;
 using CardBuilder.DAL.Entities;
 using CardBuilder.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -42,13 +43,30 @@ namespace CardBuilder.Controllers
             if (user != null)
                 return BadRequest("User exists");
 
-            var newUser = new User { Email = model.Email, UserName = model.Email};
+            var newUser = new User { Email = model.Email, UserName = Guid.NewGuid().ToString(), FirstName = model.FirstName, LastName = model.LastName};
             var result = await _userManager.CreateAsync(newUser, model.Password);
 
             if (!result.Succeeded)
                 return BadRequest("Smth went wrong");
 
             return Ok("User was added");
+        }
+
+        [HttpGet("me")] 
+        [Authorize]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized();
+
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+                return NotFound();
+
+            return Ok(user);
         }
     }
 }

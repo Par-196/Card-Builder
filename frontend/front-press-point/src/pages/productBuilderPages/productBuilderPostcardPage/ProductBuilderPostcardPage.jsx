@@ -5,6 +5,7 @@ import ProductBuilderPostcardMainContentRightSide from '../../../components/prod
 import ProductBuilderPostcardFooterBar from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardFooterBar/ProductBuilderPostcardFooterBar.jsx';
 import React, { useState, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 export default function ProductBuilderPostcardPage() {
     const [units, setUnits] = useState('');
@@ -15,7 +16,6 @@ export default function ProductBuilderPostcardPage() {
 
     const location = useLocation();
     const selectedTitle = location.state;
-    console.log(selectedTitle)
 
     const priceData = [
         { format: 'A5', print: 'Одностр', paperDensity: '120 г/м²', prices: { '501-1000': 6.8, '101-500': 12.4, '51-100': 19.9, '1-50': 75.3 } },
@@ -69,9 +69,41 @@ export default function ProductBuilderPostcardPage() {
         return (unitPrice * units).toFixed(2);
     }, [unitPrice, units]);
 
+    const productMap = {
+        'Листівка': 'Postcard',
+        'Буклет': 'Booklet',
+        'Зошит': 'Notebook',
+        'Візитка': 'BusinessCard',
+        'Плакат': 'Poster',
+        'Тег': 'Tag',
+        'Конверт': 'Envelope',
+        'Флаєр': 'Flyer'
+    };
 
+    const handleCreateOrder = async (orderData) => {        
+        const orderPayload = {
+            item: productMap[orderData.product],
+            status: "Processing",
+            description: `Формат: ${orderData.format}, Друк: ${orderData.print}, Щільність: ${orderData.paperDensity}, Ламінація: ${orderData.lamination}`,
+            amount: parseInt(orderData.quantity),
+            totalPrice: parseFloat(orderData.price),
+        };
+        console.log(orderPayload)
 
-    
+        try {
+            const token = localStorage.getItem('token');
+            const apiUrl = 'https://localhost:7117';
+            const response = await axios.post(`${apiUrl}/orders`, orderPayload, {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            alert('Замовлення створено успішно!');  
+            console.log('Order response:', response);
+        } catch (error) {
+            console.error('Помилка при створенні замовлення:', error);
+            alert('Помилка при створенні замовлення.');
+        }
+    };
+
     return (
         <div className='product-builder-postcard-container'>
             <div>
@@ -80,8 +112,18 @@ export default function ProductBuilderPostcardPage() {
                     setFormat={setFormat}
                     print={print}
                     setPrint={setPrint}
+                    orderData={{
+                        product: selectedTitle || 'Листівка',
+                        format,
+                        print,
+                        paperDensity,
+                        lamination,
+                        quantity: units,
+                        price: totalPrice,
+                    }}
+                    onCreateOrder={handleCreateOrder}
                 />
-            </div>
+            </div>  
             <div className='product-builder-postcard-main-content-box'>
                 <ProductBuilderPostcardMainContentLeftSide />
                 <ProductBuilderPostcardMainContentRightSide />
