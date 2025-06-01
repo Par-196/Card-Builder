@@ -41,11 +41,3 @@ export default function App() {
       </Routes>
   )
 }
-// Postcard
-// Booklet
-// Notepad
-// Business Card
-// Poster
-// Tag
-// Envelope
-// Flyer
