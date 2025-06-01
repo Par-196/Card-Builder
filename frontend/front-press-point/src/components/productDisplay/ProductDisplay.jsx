@@ -63,7 +63,7 @@ export default function ProductDisplay() {
     if (!selectedProduct) {
         return <p>Товар не вибрано</p>;
     }
-
+    console.log(selectedTitle)
 
     return (
     <div className='product-display-container'>
@@ -74,7 +74,9 @@ export default function ProductDisplay() {
         <p className='product-display-title'>{selectedProduct.title}</p>
         <p className='product-short-description'>{selectedProduct.shortDescription}</p>
         <div className='product-display-button-box'>
-          <CheckoutButton>До конструктора</CheckoutButton>
+          <CheckoutButton
+          selectedTitle={selectedTitle}
+          >До конструктора</CheckoutButton>
         </div>
       </div>
     </div>

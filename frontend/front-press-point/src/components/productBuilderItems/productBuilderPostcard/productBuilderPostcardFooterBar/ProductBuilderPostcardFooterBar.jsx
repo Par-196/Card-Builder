@@ -29,7 +29,6 @@ export default function ProductBuilderPostcardFooterBar({ price, units, onUnitsC
                 </div>
             </div>
             <div className='product-builder-postcard-footer-bar-button-and-text-field-box'>
-
                 <div className='product-builder-postcard-footer-bar-text-field-box'>
                     <div className='product-builder-postcard-footer-bar-text-field-title'>
                         <p>К-сть</p>
@@ -38,7 +37,6 @@ export default function ProductBuilderPostcardFooterBar({ price, units, onUnitsC
                         <NumberOfUnitsOfProduct value={units} onChange={handleUnitsChange}/>
                     </div>
                 </div>
-
                 <div className='product-builder-postcard-footer-bar-button-paper-density-box'>
                     <div className='product-builder-postcard-footer-bar-button-paper-density-title'>
                         <p>Щільність</p>

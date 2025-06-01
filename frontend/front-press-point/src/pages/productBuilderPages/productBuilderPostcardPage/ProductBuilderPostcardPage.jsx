@@ -1,16 +1,21 @@
-import './ProductBuilderPage.css'
-import ProductBuilderPostcardHeaderBar from '../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardHeaderBar/ProductBuilderPostcardHeaderBar.jsx';
-import ProductBuilderPostcardMainContentLeftSide from '../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardMainContentLeftSide/productBuilderPostcardMainContentLeftSide.jsx';
-import ProductBuilderPostcardMainContentRightSide from '../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardMainContentRightSide/ProductBuilderPostcardMainContentRightSide.jsx';
-import ProductBuilderPostcardFooterBar from '../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardFooterBar/ProductBuilderPostcardFooterBar.jsx';
+import './ProductBuilderPostcardPage.css'
+import ProductBuilderPostcardHeaderBar from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardHeaderBar/ProductBuilderPostcardHeaderBar.jsx';
+import ProductBuilderPostcardMainContentLeftSide from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardMainContentLeftSide/productBuilderPostcardMainContentLeftSide.jsx';
+import ProductBuilderPostcardMainContentRightSide from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardMainContentRightSide/ProductBuilderPostcardMainContentRightSide.jsx';
+import ProductBuilderPostcardFooterBar from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardFooterBar/ProductBuilderPostcardFooterBar.jsx';
 import React, { useState, useMemo } from 'react';
+import { useLocation } from 'react-router-dom';
 
-export default function ProductBuilderPage() {
+export default function ProductBuilderPostcardPage() {
     const [units, setUnits] = useState('');
     const [format, setFormat] = useState('A5');
     const [print, setPrint] = useState('Одностр');
     const [paperDensity, setPaperDensity] = useState('120 г/м²');
     const [lamination, setLamination] = useState("Матова");
+
+    const location = useLocation();
+    const selectedTitle = location.state;
+    console.log(selectedTitle)
 
     const priceData = [
         { format: 'A5', print: 'Одностр', paperDensity: '120 г/м²', prices: { '501-1000': 6.8, '101-500': 12.4, '51-100': 19.9, '1-50': 75.3 } },
