@@ -4,8 +4,15 @@ import TotalPriceTextField from '../../../../ui/textField/productBuilderTextFiel
 import PostcardPaperDensityButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardPaperDensityButton.jsx'
 import PostcardLaminationButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardLaminationButton.jsx'
 
-export default function ProductBuilderPostcardFooterBar()
+export default function ProductBuilderPostcardFooterBar({ price, units, onUnitsChange, paperDensity, setPaperDensity, lamination, setLamination })
 {
+    const handleUnitsChange = (event) => {
+    const newValue = event.target.value;
+        if (/^\d*$/.test(newValue)) {
+        onUnitsChange(newValue); 
+        }
+    };
+    console.log(price);
     return(
         <div className='product-builder-postcard-footer-bar-container'>
             <div className='product-builder-postcard-footer-bar-price-box'>
@@ -14,7 +21,7 @@ export default function ProductBuilderPostcardFooterBar()
                 </div>
                 <div className='product-builder-postcard-footer-bar-price-container'>
                     <div className='product-builder-postcard-footer-bar-price-textField'>
-                        <TotalPriceTextField />
+                        <TotalPriceTextField price={price}/>
                     </div>
                     <div className='product-builder-postcard-footer-bar-price-description'>
                         <p>ГРН</p>
@@ -22,20 +29,25 @@ export default function ProductBuilderPostcardFooterBar()
                 </div>
             </div>
             <div className='product-builder-postcard-footer-bar-button-and-text-field-box'>
+
                 <div className='product-builder-postcard-footer-bar-text-field-box'>
                     <div className='product-builder-postcard-footer-bar-text-field-title'>
                         <p>К-сть</p>
                     </div>
                     <div className='product-builder-postcard-footer-bar-text-field'>
-                        <NumberOfUnitsOfProduct />
+                        <NumberOfUnitsOfProduct value={units} onChange={handleUnitsChange}/>
                     </div>
                 </div>
+
                 <div className='product-builder-postcard-footer-bar-button-paper-density-box'>
                     <div className='product-builder-postcard-footer-bar-button-paper-density-title'>
                         <p>Щільність</p>
                     </div>
                     <div className='product-builder-postcard-footer-bar-button-paper-density'>
-                        <PostcardPaperDensityButton />
+                        <PostcardPaperDensityButton
+                        paperDensity={paperDensity}
+                        setPaperDensity={setPaperDensity}
+                        />
                     </div>
                 </div>
                 <div className='product-builder-postcard-footer-bar-button-lamination-box'>
@@ -43,7 +55,10 @@ export default function ProductBuilderPostcardFooterBar()
                         <p>Ламінація</p>
                     </div>
                     <div className='product-builder-postcard-footer-bar-button-lamination'>
-                        <PostcardLaminationButton />
+                        <PostcardLaminationButton 
+                        lamination={lamination}
+                        setLamination={setLamination} 
+                        />
                     </div>
                 </div>
             </div>

@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 
-export default function PostcardLaminationButton() {
-  const [selected, setSelected] = useState('One');
+export default function PostcardLaminationButton({lamination, setLamination}) {
 
   const handleClick = (value) => {
-    setSelected(value);
+    setLamination(value);
   };
 
   return (
@@ -26,9 +24,8 @@ export default function PostcardLaminationButton() {
             textTransform: 'none',
             border: '1px solid black',
             borderRadius: '10px',
-            backgroundColor: selected === label ? '#ffffff' : '#242424',
-            
-            color: selected === label ? '#000000' : '#ffffff',
+            backgroundColor: lamination === label ? '#ffffff' : '#242424',
+            color: lamination === label ? '#000000' : '#ffffff',
           }}
         >
           {label}

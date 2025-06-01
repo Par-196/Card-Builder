@@ -1,21 +1,15 @@
 import Button from '@mui/material/Button';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function BackButton({}) {
     
     const navigate = useNavigate();
 
-    const location = useLocation();
-
-    const title  = location.state;
-
-    console.log(title)
-
     return (
         <Button
             variant="text"
             color='black'
-            onClick={() => navigate('/product', { state: title })}
+            onClick={() => navigate('/catalog')}
             sx={{
                 borderRadius: '0px',
                 width: '449px',

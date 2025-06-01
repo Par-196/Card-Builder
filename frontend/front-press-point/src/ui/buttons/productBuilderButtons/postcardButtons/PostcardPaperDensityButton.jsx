@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 
-export default function PostcardPaperDensityButton() {
-  const [selected, setSelected] = useState('One');
+export default function PostcardPaperDensityButton({paperDensity, setPaperDensity}) {
 
   const handleClick = (value) => {
-    setSelected(value);
+    setPaperDensity(value);
   };
 
   return (
@@ -26,9 +24,8 @@ export default function PostcardPaperDensityButton() {
             textTransform: 'none',
             border: '1px solid black',
             borderRadius: '10px',
-            backgroundColor: selected === label ? '#ffffff' : '#242424',
-            
-            color: selected === label ? '#000000' : '#ffffff',
+            backgroundColor: paperDensity === label ? '#ffffff' : '#242424',
+            color: paperDensity === label ? '#000000' : '#ffffff',
           }}
         >
           {label}

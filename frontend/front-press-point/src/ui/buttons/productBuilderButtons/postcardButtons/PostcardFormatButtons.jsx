@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 
-export default function PostcardFormatButtons() {
-  const [selected, setSelected] = useState('One');
-
+export default function PostcardFormatButtons({ format, setFormat }) {
   const handleClick = (value) => {
-    setSelected(value);
+    setFormat(value); 
   };
-
+  
   return (
-    <ButtonGroup
-      color='black'
-    >
+    <ButtonGroup color='black'>
       {['A5', 'A6'].map((label) => (
         <Button
           key={label}
@@ -26,9 +21,8 @@ export default function PostcardFormatButtons() {
             textTransform: 'none',
             border: '1px solid black',
             borderRadius: '10px',
-            backgroundColor: selected === label ? '#ffffff' : '#242424',
-            
-            color: selected === label ? '#000000' : '#ffffff',
+            backgroundColor: format === label ? '#ffffff' : '#242424',
+            color: format === label ? '#000000' : '#ffffff',
           }}
         >
           {label}

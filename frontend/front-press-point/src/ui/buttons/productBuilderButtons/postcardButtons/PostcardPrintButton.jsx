@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 
-export default function PostcardPrintButton() {
-  const [selected, setSelected] = useState('One');
-
+export default function PostcardPrintButton({print, setPrint }) {
   const handleClick = (value) => {
-    setSelected(value);
+    setPrint(value);
   };
 
   return (
-    <ButtonGroup
-      color='black'
-    >
+    <ButtonGroup color='black'>
       {['Одностр', 'Двостр'].map((label) => (
         <Button
           key={label}
@@ -26,9 +21,8 @@ export default function PostcardPrintButton() {
             textTransform: 'none',
             border: '1px solid black',
             borderRadius: '10px',
-            backgroundColor: selected === label ? '#ffffff' : '#242424',
-            
-            color: selected === label ? '#000000' : '#ffffff',
+            backgroundColor: print === label ? '#ffffff' : '#242424',
+            color: print === label ? '#000000' : '#ffffff',
           }}
         >
           {label}

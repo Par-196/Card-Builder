@@ -6,14 +6,14 @@ import ProductBuilderOrderButton from '../../../../ui/buttons/productBuilderButt
 import { useLocation } from 'react-router-dom';
 
 
-export default function ProductBuilderPostcardHeaderBar(selectedTitle )
+export default function ProductBuilderPostcardHeaderBar( {format, setFormat, print, setPrint } )
 {
     const location = useLocation();
 
     return (
         <div className='product-builder-postcard-header-bar'>
             <div className='product-builder-postcard-header-back-button-box'>
-                <BackButton selectedTitle={selectedTitle} />
+                <BackButton  />
             </div>
             <div className='product-builder-postcard-header-buttons'>
                 <div className="product-builder-postcard-header-button-format-box">
@@ -21,7 +21,10 @@ export default function ProductBuilderPostcardHeaderBar(selectedTitle )
                         <p>Формат</p>
                     </div>
                     <div className="product-builder-postcard-header-button-format">
-                        <PostcardFormatButtons />
+                        <PostcardFormatButtons 
+                        format={format} 
+                        setFormat={setFormat} 
+                        />
                     </div>
                 </div>
                 <div className="product-builder-postcard-header-button-print-box">
@@ -29,7 +32,10 @@ export default function ProductBuilderPostcardHeaderBar(selectedTitle )
                         <p>Друк</p>
                     </div>
                     <div className="product-builder-postcard-header-button-print">
-                        <PostcardPrintButton />
+                        <PostcardPrintButton
+                        print={print}
+                        setPrint={setPrint}
+                         />
                     </div>
                 </div>
                 <div className="product-builder-postcard-header-buttons-builder-order">
