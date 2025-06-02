@@ -1,8 +1,8 @@
-import './ProductBuilderPostcardMainContent.css'
+import './ProductBuilderMainContent.css'
 import MainContentLeftSideButtons from '../../../../ui/buttons/productBuilderButtons/MainContentLeftSideButtons';
 import ProductBuilderMainContentImageList from '../../../../ui/lists/productBuilderMainContentImageList';
 import ProductBuilderImageUploadButton from '../../../../ui/buttons/productBuilderButtons/ProductBuilderImageUploadButton';
-import productBuilderImage from '../../../../assets/img/productBuilderImage.jpg';
+import productBuilderImage from '../../../assets/img/productBuilderImage.jpg';
 import ProductBuilderMaterialUIIcons from '../../../../ui/grid/productBuilderMaterialUIIcons';
 import MainContentLeftSideTextButton from '../../../../ui/buttons/productBuilderButtons/MainContentLeftSideTextButton';
 import MainContentRightSideCustomizationTextButtons from '../../../../ui/buttons/productBuilderButtons/MainContentRightSideCustomizationTextButtons'
@@ -10,7 +10,7 @@ import ProductBuilderDragAndDropField from '../../productBuilderDragAndDropField
 import { useState } from 'react';
 
 
-export default function ProductBuilderPostcardMainContent()
+export default function ProductBuilderMainContent()
 {
     const [statusButton, setStatusButton] = useState("Загрузка");
     const [images, setImages] = useState([]);

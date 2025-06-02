@@ -16,6 +16,7 @@ import ProductBuilderPosterPage from './pages/productBuilderPages/productBuilder
 import ProductBuilderTagPage from './pages/productBuilderPages/productBuilderTagPage/ProductBuilderTagPage.jsx'
 import ProductBuilderEnvelopePage from './pages/productBuilderPages/productBuilderEnvelopePage/ProductBuilderEnvelopePage.jsx'
 import ProductBuilderFlyerPage from './pages/productBuilderPages/productBuilderFlyerPage/ProductBuilderFlyerPage.jsx'
+import ProductBuilderLayout from './layout/productBuilderLayout/ProductBuilderLayout.jsx'
 import AuthVerify from './services/authService/authService.js'
 
 export default function App() {
@@ -27,14 +28,16 @@ export default function App() {
             <Route path='/catalog' element={<ProductСatalogPage />}/>
             <Route path="/about" element={<InformationAboutUsPage />} />
             <Route path="/product" element={<ProductPage />} />
-            <Route path="/postcardbuilder" element={<ProductBuilderPostcardPage />} />
-            <Route path="/bookletbuilder" element={<ProductBuilderBookletPage />} />
-            <Route path="/notepadbuilder" element={<ProductBuilderNotepadPage />} />
-            <Route path="/businesscardbuilder" element={<ProductBuilderBusinessCardPage />} />
-            <Route path="/posterbuilder" element={<ProductBuilderPosterPage />} />
-            <Route path="/tagbuilder" element={<ProductBuilderTagPage />} />
-            <Route path="/envelopebuilder" element={<ProductBuilderEnvelopePage />} />
-            <Route path="/flyerbuilder" element={<ProductBuilderFlyerPage />} />
+            <Route path="/builder"element={<ProductBuilderLayout />} >
+              <Route path="postcardbuilder" element={<ProductBuilderPostcardPage />} />
+              <Route path="bookletbuilder" element={<ProductBuilderBookletPage />} />
+              <Route path="notepadbuilder" element={<ProductBuilderNotepadPage />} />
+              <Route path="businesscardbuilder" element={<ProductBuilderBusinessCardPage />} />
+              <Route path="posterbuilder" element={<ProductBuilderPosterPage />} />
+              <Route path="tagbuilder" element={<ProductBuilderTagPage />} />
+              <Route path="envelopebuilder" element={<ProductBuilderEnvelopePage />} />
+              <Route path="flyerbuilder" element={<ProductBuilderFlyerPage />} />
+            </Route>
           </Route>
           <Route path="/login" element={<AccountLoginPage />} />
           <Route path="/registration" element={<AccountRegistrationPage />} />

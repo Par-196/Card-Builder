@@ -1,14 +1,12 @@
-import "./productBuilderPostcardHeaderBar.css"
+import "./ProductBuilderHeaderBar.css"
 import BackButton from "../../../../ui/buttons/productBuilderButtons/BackButton.jsx"
 import PostcardFormatButtons from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardFormatButtons.jsx'
 import PostcardPrintButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardPrintButton.jsx'
 import ProductBuilderOrderButton from '../../../../ui/buttons/productBuilderButtons/ProductBuilderOrderButton.jsx'
-import { useLocation } from 'react-router-dom';
 
 
-export default function ProductBuilderPostcardHeaderBar( {format, setFormat, print, setPrint, orderData, onCreateOrder } )
+export default function ProductBuilderHeaderBar( {format, setFormat, print, setPrint, orderData, onCreateOrder } )
 {
-    const location = useLocation();
 
     return (
         <div className='product-builder-postcard-header-bar'>
