@@ -7,17 +7,17 @@ export default function CheckoutButton({ children, selectedTitle }) {
   const title = location.state;
 
   const productRoutes = {
-    'Листівка': '/builder/postcardbuilder',
-    'Буклет': '/builder/bookletbuilder',
-    'Блокнот': '/builder/notepadbuilder',
-    'Візитка': '/builder/businesscardbuilder',
-    'Постер': '/builder/posterbuilder',
-    'Бірка': '/builder/tagbuilder',
-    'Конверт': '/builder/envelopebuilder',
-    'Флаєр': '/builder/flyerbuilder',
+    'Листівка': '/postcardbuilder',
+    'Буклет': '/bookletbuilder',
+    'Блокнот': '/notepadbuilder',
+    'Візитка': '/businesscardbuilder',
+    'Постер': '/posterbuilder',
+    'Бірка': '/tagbuilder',
+    'Конверт': '/envelopebuilder',
+    'Флаєр': '/flyerbuilder',
   };
 
-  const route = productRoutes[selectedTitle];
+  const route = productRoutes[title] || '/';
 
   return (
     <Button 

@@ -1,10 +1,10 @@
-import './ProductBuilderFooterBar.css'
-import NumberOfUnitsOfProduct from '../../../ui/textField/productBuilderTextField/NumberOfUnitsOfProduct.jsx'
-import TotalPriceTextField from '../../../ui/textField/productBuilderTextField/TotalPriceTextField.jsx'
-import PostcardPaperDensityButton from '../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardPaperDensityButton.jsx'
-import PostcardLaminationButton from '../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardLaminationButton.jsx'
+import './ProductBuilderPostcardFooterBar.css'
+import NumberOfUnitsOfProduct from '../../../../ui/textField/productBuilderTextField/NumberOfUnitsOfProduct.jsx'
+import TotalPriceTextField from '../../../../ui/textField/productBuilderTextField/TotalPriceTextField.jsx'
+import PostcardPaperDensityButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardPaperDensityButton.jsx'
+import PostcardLaminationButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardLaminationButton.jsx'
 
-export default function ProductBuilderFooterBar({ price, units, onUnitsChange, paperDensity, setPaperDensity, lamination, setLamination })
+export default function ProductBuilderPostcardFooterBar({ price, units, onUnitsChange, paperDensity, setPaperDensity, lamination, setLamination })
 {
     const handleUnitsChange = (event) => {
     const newValue = event.target.value;
