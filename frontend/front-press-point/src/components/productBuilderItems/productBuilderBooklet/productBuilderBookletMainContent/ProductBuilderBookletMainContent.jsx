@@ -25,31 +25,31 @@ export default function ProductBuilderBookletMainContent()
 
     
     return(
-        <div className='product-builder-postcard-main-content'>
-            <div className='product-builder-postcard-main-content-left-side-container'>
-                <div className='product-builder-postcard-main-content-left-side-container-left-box-buttons'>
+        <div className='product-builder-booklet-main-content'>
+            <div className='product-builder-booklet-main-content-left-side-container'>
+                <div className='product-builder-booklet-main-content-left-side-container-left-box-buttons'>
                     <MainContentLeftSideButtons
                     statusButton={statusButton}
                     setStatusButton={setStatusButton}
                     />
                 </div>
-                <div className='product-builder-postcard-main-content-left-side-container-right-box-contnt'>
+                <div className='product-builder-booklet-main-content-left-side-container-right-box-contnt'>
                     {statusButton === "Загрузка" && (
                     <>
-                        <div className='product-builder-postcard-main-content-left-side-container-right-box-button-and-input-image-box'>
-                            <div className='product-builder-postcard-main-content-left-side-container-right-box-image-box'>
+                        <div className='product-builder-booklet-main-content-left-side-container-right-box-button-and-input-image-box'>
+                            <div className='product-builder-booklet-main-content-left-side-container-right-box-image-box'>
                                 <img
                                 src={productBuilderImage}
                                 alt="productBuilderImage"
-                                className='product-builder-postcard-main-content-left-side-container-right-box-button-image'
+                                className='product-builder-booklet-main-content-left-side-container-right-box-button-image'
                                 />
                             </div>
-                            <div className='product-builder-postcard-main-content-left-side-container-right-box-button'>
+                            <div className='product-builder-booklet-main-content-left-side-container-right-box-button'>
                                 <ProductBuilderImageUploadButton onImageUpload={handleImageUpload} />
                             </div>
                             </div>
 
-                            <div className='product-builder-postcard-main-content-left-side-container-right-box-input-image'>
+                            <div className='product-builder-booklet-main-content-left-side-container-right-box-input-image'>
                             <ProductBuilderMainContentImageList images={images} />
                             
                             </div>
@@ -64,15 +64,15 @@ export default function ProductBuilderBookletMainContent()
                     )}
                     {statusButton === "Текст" && (
                         <>
-                            <div className='product-builder-postcard-main-content-left-side-container-right-box-text-button'>
+                            <div className='product-builder-booklet-main-content-left-side-container-right-box-text-button'>
                                 <MainContentLeftSideTextButton/>
                             </div>
                         </>
                     )}
                 </div>
             </div>
-            <div className='product-builder-postcard-main-content-right-side-container'>
-                <div className='product-builder-postcard-main-content-right-side-text-customization-buttons'>
+            <div className='product-builder-booklet-main-content-right-side-container'>
+                <div className='product-builder-booklet-main-content-right-side-text-customization-buttons'>
                     <>
                         {statusButton === 'Текст' && (
                             <MainContentRightSideCustomizationTextButtons />

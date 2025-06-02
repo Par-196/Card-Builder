@@ -1,10 +1,9 @@
 import './ProductBuilderBookletFooterBar.css'
 import NumberOfUnitsOfProduct from '../../../../ui/textField/productBuilderTextField/NumberOfUnitsOfProduct.jsx'
 import TotalPriceTextField from '../../../../ui/textField/productBuilderTextField/TotalPriceTextField.jsx'
-import PostcardPaperDensityButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardPaperDensityButton.jsx'
-import PostcardLaminationButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardLaminationButton.jsx'
+import BookletLaminationButtons from '../../../../ui/buttons/productBuilderButtons/bookletButtons/BookletLaminationButtons.jsx';
 
-export default function ProductBuilderBookletFooterBar({ price, units, onUnitsChange, paperDensity, setPaperDensity, lamination, setLamination })
+export default function ProductBuilderBookletFooterBar({ price, units, onUnitsChange, lamination, setLamination })
 {
     const handleUnitsChange = (event) => {
     const newValue = event.target.value;
@@ -13,46 +12,38 @@ export default function ProductBuilderBookletFooterBar({ price, units, onUnitsCh
         }
     };
     return(
-        <div className='product-builder-postcard-footer-bar-container'>
-            <div className='product-builder-postcard-footer-bar-price-box'>
-                <div className='product-builder-postcard-footer-bar-price-box-title'>
+        <div className='product-builder-booklet-footer-bar-container'>
+            <div className='product-builder-booklet-footer-bar-price-box'>
+                <div className='product-builder-booklet-footer-bar-price-box-title'>
                     <p>Ціна</p>
                 </div>
-                <div className='product-builder-postcard-footer-bar-price-container'>
-                    <div className='product-builder-postcard-footer-bar-price-textField'>
+                <div className='product-builder-booklet-footer-bar-price-container'>
+                    <div className='product-builder-booklet-footer-bar-price-textField'>
                         <TotalPriceTextField price={price}/>
                     </div>
-                    <div className='product-builder-postcard-footer-bar-price-description'>
+                    <div className='product-builder-booklet-footer-bar-price-description'>
                         <p>ГРН</p>
                     </div>
                 </div>
             </div>
-            <div className='product-builder-postcard-footer-bar-button-and-text-field-box'>
-                <div className='product-builder-postcard-footer-bar-text-field-box'>
-                    <div className='product-builder-postcard-footer-bar-text-field-title'>
+            <div className='product-builder-booklet-footer-bar-button-and-text-field-box'>
+                <div className='product-builder-booklet-footer-bar-text-field-box'>
+                    <div className='product-builder-booklet-footer-bar-text-field-title'>
                         <p>К-сть</p>
                     </div>
-                    <div className='product-builder-postcard-footer-bar-text-field'>
+                    <div className='product-builder-booklet-footer-bar-text-field'>
                         <NumberOfUnitsOfProduct value={units} onChange={handleUnitsChange}/>
                     </div>
                 </div>
-                <div className='product-builder-postcard-footer-bar-button-paper-density-box'>
-                    <div className='product-builder-postcard-footer-bar-button-paper-density-title'>
-                        <p>Щільність</p>
-                    </div>
-                    <div className='product-builder-postcard-footer-bar-button-paper-density'>
-                        <PostcardPaperDensityButton
-                        paperDensity={paperDensity}
-                        setPaperDensity={setPaperDensity}
-                        />
-                    </div>
+                <div className='product-builder-booklet-footer-bar-button-paper-density-box'>
+                    
                 </div>
-                <div className='product-builder-postcard-footer-bar-button-lamination-box'>
-                    <div className='product-builder-postcard-footer-bar-button-lamination-title'>
+                <div className='product-builder-booklet-footer-bar-button-lamination-box'>
+                    <div className='product-builder-booklet-footer-bar-button-lamination-title'>
                         <p>Ламінація</p>
                     </div>
-                    <div className='product-builder-postcard-footer-bar-button-lamination'>
-                        <PostcardLaminationButton 
+                    <div className='product-builder-booklet-footer-bar-button-lamination'>
+                        <BookletLaminationButtons 
                         lamination={lamination}
                         setLamination={setLamination} 
                         />
