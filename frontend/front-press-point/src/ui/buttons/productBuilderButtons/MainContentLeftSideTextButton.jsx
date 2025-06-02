@@ -1,11 +1,12 @@
 import Button from '@mui/material/Button'
 
-export default function MainContentLeftSideTextButton() {
+export default function MainContentLeftSideTextButton({ onAddText }) {
 
-  
   return (
     <Button 
       variant='contained'
+      className="text-button"
+      onClick={onAddText}
       sx={{
         backgroundColor: '#242424',
         color: 'white',

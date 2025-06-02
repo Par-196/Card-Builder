@@ -78,3 +78,8 @@
     justify-content: center;
     align-items: center;
 }
+.product-builder-postcard-main-content-right-side-drag-and-drop-field
+{
+    width: 100%;
+    height: calc(100% - 60px);
+}

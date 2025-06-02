@@ -6,6 +6,7 @@ import productBuilderImage from '../../../../assets/img/productBuilderImage.jpg'
 import ProductBuilderMaterialUIIcons from '../../../../ui/grid/productBuilderMaterialUIIcons';
 import MainContentLeftSideTextButton from '../../../../ui/buttons/productBuilderButtons/MainContentLeftSideTextButton';
 import MainContentRightSideCustomizationTextButtons from '../../../../ui/buttons/productBuilderButtons/MainContentRightSideCustomizationTextButtons'
+import ProductBuilderDragAndDropField from '../../productBuilderDragAndDropField/ProductBuilderDragAndDropField';
 import { useState } from 'react';
 
 
@@ -77,6 +78,9 @@ export default function ProductBuilderPostcardMainContent()
                             <MainContentRightSideCustomizationTextButtons />
                         )}
                     </>
+                </div>
+                <div>
+                  <ProductBuilderDragAndDropField />
                 </div>
             </div>
         </div>
