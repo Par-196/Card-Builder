@@ -1,7 +1,6 @@
 import './ProductBuilderPostcardPage.css'
 import ProductBuilderPostcardHeaderBar from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardHeaderBar/ProductBuilderPostcardHeaderBar.jsx';
-import ProductBuilderPostcardMainContentLeftSide from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardMainContentLeftSide/productBuilderPostcardMainContentLeftSide.jsx';
-import ProductBuilderPostcardMainContentRightSide from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardMainContentRightSide/ProductBuilderPostcardMainContentRightSide.jsx';
+import ProductBuilderPostcardMainContent from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardMainContent/ProductBuilderPostcardMainContent.jsx';
 import ProductBuilderPostcardFooterBar from '../../../components/productBuilderItems/productBuilderPostcard/productBuilderPostcardFooterBar/ProductBuilderPostcardFooterBar.jsx';
 import React, { useState, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -16,6 +15,7 @@ export default function ProductBuilderPostcardPage() {
 
     const location = useLocation();
     const selectedTitle = location.state;
+    console.log(selectedTitle);
 
     const priceData = [
         { format: 'A5', print: 'Одностр', paperDensity: '120 г/м²', prices: { '501-1000': 6.8, '101-500': 12.4, '51-100': 19.9, '1-50': 75.3 } },
@@ -125,8 +125,7 @@ export default function ProductBuilderPostcardPage() {
                 />
             </div>  
             <div className='product-builder-postcard-main-content-box'>
-                <ProductBuilderPostcardMainContentLeftSide />
-                <ProductBuilderPostcardMainContentRightSide />
+                <ProductBuilderPostcardMainContent />
             </div>
             <div>
                 <ProductBuilderPostcardFooterBar

@@ -12,7 +12,6 @@ export default function ProductBuilderPostcardFooterBar({ price, units, onUnitsC
         onUnitsChange(newValue); 
         }
     };
-    console.log(price);
     return(
         <div className='product-builder-postcard-footer-bar-container'>
             <div className='product-builder-postcard-footer-bar-price-box'>

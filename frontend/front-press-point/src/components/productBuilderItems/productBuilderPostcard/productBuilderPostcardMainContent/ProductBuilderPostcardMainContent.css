@@ -1,3 +1,10 @@
+.product-builder-postcard-main-content
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
 .product-builder-postcard-main-content-left-side-container
 {
     width: 449px;
@@ -50,6 +57,24 @@
     justify-content: center;
     align-items: center;
 }
-
-
-
+.product-builder-postcard-main-content-left-side-container-right-box-text-button
+{
+    width: 349px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-builder-postcard-main-content-right-side-container
+{
+    width: calc(100% - 449px);
+    height: 643px;
+}
+.product-builder-postcard-main-content-right-side-text-customization-buttons
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
