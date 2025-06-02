@@ -7,20 +7,24 @@ import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import FormatBoldIcon from '@mui/icons-material/FormatBold';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';
 import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
-import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup, {
   toggleButtonGroupClasses,
 } from '@mui/material/ToggleButtonGroup';
+import TextField from '@mui/material/TextField';
 
-const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme}) => ({
+const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
   [`& .${toggleButtonGroupClasses.grouped}`]: {
     margin: theme.spacing(0.5),
     border: 0,
     borderRadius: theme.shape.borderRadius,
+    color: 'black', 
+    '&.Mui-selected': {
+      color: 'black',
+      backgroundColor: 'rgba(0,0,0,0.1)',
+    },
     [`&.${toggleButtonGroupClasses.disabled}`]: {
       border: 0,
     },
@@ -35,6 +39,7 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme}) => ({
 export default function MainContentRightSideCustomizationTextButtons() {
   const [alignment, setAlignment] = React.useState('left');
   const [formats, setFormats] = React.useState(() => ['italic']);
+  const [fontSize, setFontSize] = React.useState(14);
 
   const handleFormat = (event, newFormats) => {
     setFormats(newFormats);
@@ -42,6 +47,13 @@ export default function MainContentRightSideCustomizationTextButtons() {
 
   const handleAlignment = (event, newAlignment) => {
     setAlignment(newAlignment);
+  };
+
+  const handleFontSizeChange = (event) => {
+    const newSize = parseInt(event.target.value);
+    if (!isNaN(newSize)) {
+      setFontSize(newSize);
+    }
   };
 
   return (
@@ -52,6 +64,7 @@ export default function MainContentRightSideCustomizationTextButtons() {
           display: 'flex',
           border: `1px solid ${theme.palette.divider}`,
           flexWrap: 'wrap',
+          alignItems: 'center',
         })}
       >
         <StyledToggleButtonGroup
@@ -74,7 +87,9 @@ export default function MainContentRightSideCustomizationTextButtons() {
             <FormatAlignJustifyIcon />
           </ToggleButton>
         </StyledToggleButtonGroup>
+
         <Divider flexItem orientation="vertical" sx={{ mx: 0.5, my: 1 }} />
+
         <StyledToggleButtonGroup
           size="small"
           value={formats}
@@ -90,11 +105,26 @@ export default function MainContentRightSideCustomizationTextButtons() {
           <ToggleButton value="underlined" aria-label="underlined">
             <FormatUnderlinedIcon />
           </ToggleButton>
-          <ToggleButton value="color" aria-label="color" disabled>
-            <FormatColorFillIcon />
-            <ArrowDropDownIcon />
-          </ToggleButton>
         </StyledToggleButtonGroup>
+
+        <Divider flexItem orientation="vertical" sx={{ mx: 0.5, my: 1 }} />
+
+        <TextField
+          type="number"
+          value={fontSize}
+          onChange={handleFontSizeChange}
+          size="small"
+          variant="outlined"
+          sx={{
+            width: 60,
+            mx: 0.5,
+            '& .MuiInputBase-input': {
+              padding: '4px 8px',
+              textAlign: 'center',
+            },
+          }}
+          inputProps={{ min: 1, max: 200 }}
+        />
       </Paper>
     </div>
   );
