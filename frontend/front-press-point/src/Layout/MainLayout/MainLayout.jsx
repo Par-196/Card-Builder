@@ -13,3 +13,11 @@ export default function MainLayout()
         </div>
     )
 }
+// Postcard
+// Booklet
+// Notepad
+// Business Card
+// Poster
+// Tag
+// Envelope
+// Flyer
