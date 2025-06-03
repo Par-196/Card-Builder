@@ -19,7 +19,8 @@ export default function NotepadRibbonButton({ ribbon, setRibbon }) {
         borderRadius: '10px',
         color: isActive ? '#242424' : 'white',
         backgroundColor: isActive ? 'white' : '#242424',
-        fontSize: '16px',
+        textTransform: 'none',
+        fontSize: '18px',
         fontFamily: "'JetBrains Mono', monospace",
       }}
     >
