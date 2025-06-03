@@ -1,4 +1,4 @@
-.product-builder-postcard-header-bar
+.product-builder-business-card-header-bar
 {
     width: 100%;
     height: 99px;
@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
 }
-.product-builder-postcard-header-back-button-box {
+.product-builder-business-card-header-back-button-box {
     width: 449px;
     height: 99px;
     border-right: 1px solid black;
@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
 }
-.product-builder-postcard-header-buttons
+.product-builder-business-card-header-buttons
 {
     width: calc(100% - 549px);
     height: 99px;
@@ -27,45 +27,54 @@
     align-items: center;
     margin-right: 100px;
 }
-.product-builder-postcard-header-button-format-box
+.product-builder-business-card-header-button-format-box
 {
-    width: 300px;
+    width: 416px;
     height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-left: 50px;
 }
-.product-builder-postcard-header-button-format-title
+.product-builder-business-card-header-button-format-title
 {
-    width: 70px;
+    width: 66px;
     height: 50px;
     font-size: 20px;
     display: flex;
     align-items: center;
 }
-.product-builder-postcard-header-button-format
+.product-builder-business-card-header-button-format
 {
-    width: 200px;
+    width: 300px;
     height: 50px;
 }
-.product-builder-postcard-header-button-print-box
+.product-builder-business-card-header-button-printing-buttons-box
 {
-    width: 414px;
+    width: 364px;
     height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.product-builder-postcard-header-button-print
+.product-builder-business-card-header-button-print-title
 {
-    width: 334px;
+    width: 44px;
     height: 50px;
     font-size: 20px;
     display: flex;
     align-items: center;
 }
-.product-builder-postcard-header-buttons-builder-order
+.product-builder-business-card-header-button-print
+{
+    width: 270px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product-builder-business-card-header-buttons-builder-order
 {
     width: 270px;
     height: 60px;

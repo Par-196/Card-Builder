@@ -47,7 +47,7 @@ export default function BusinessCardTable({ rows }) {
               201-500
             </TableCell>
             <TableCell width='160' align="right" sx={{ fontSize: '14px' }}>
-              100-200
+              1-200
             </TableCell>
           </TableRow>
         </TableHead>
