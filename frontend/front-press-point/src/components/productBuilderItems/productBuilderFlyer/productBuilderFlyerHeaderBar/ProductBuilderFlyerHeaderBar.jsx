@@ -1,7 +1,7 @@
-import "./ProductBuilderFlyerHeaderBar.css"
-import BackButton from "../../../../ui/buttons/productBuilderButtons/BackButton.jsx"
-import PostcardFormatButtons from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardFormatButtons.jsx'
-import PostcardPrintButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardPrintButton.jsx'
+import './ProductBuilderFlyerHeaderBar.css'
+import BackButton from '../../../../ui/buttons/productBuilderButtons/BackButton.jsx'
+import FlyerFormatButton from '../../../../ui/buttons/productBuilderButtons/flyerButtons/FlyerFormatButton.jsx'
+import FlyerPrintButton from '../../../../ui/buttons/productBuilderButtons/flyerButtons/FlyerPrintButton.jsx'
 import ProductBuilderOrderButton from '../../../../ui/buttons/productBuilderButtons/ProductBuilderOrderButton.jsx'
 import { useLocation } from 'react-router-dom';
 
@@ -21,7 +21,7 @@ export default function ProductBuilderFlyerHeaderBar( {format, setFormat, print,
                         <p>Формат</p>
                     </div>
                     <div className="product-builder-flyer-header-button-format">
-                        <PostcardFormatButtons 
+                        <FlyerFormatButton 
                         format={format} 
                         setFormat={setFormat} 
                         />
@@ -32,7 +32,7 @@ export default function ProductBuilderFlyerHeaderBar( {format, setFormat, print,
                         <p>Друк</p>
                     </div>
                     <div className="product-builder-flyer-header-button-print">
-                        <PostcardPrintButton
+                        <FlyerPrintButton
                         print={print}
                         setPrint={setPrint}
                          />

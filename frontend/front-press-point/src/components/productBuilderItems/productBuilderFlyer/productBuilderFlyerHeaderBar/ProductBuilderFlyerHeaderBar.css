@@ -49,6 +49,24 @@
     width: 270px;
     height: 50px;
 }
+.product-builder-flyer-header-button-print-box
+{
+    width: 428px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.roduct-builder-flyer-header-button-format-title
+{
+    width: 44px;
+    height: 24px;
+}
+.product-builder-flyer-header-button-print
+{
+    width: 334px;
+    height: 50px;
+}
 .product-builder-flyer-header-buttons-builder-order
 {
     width: 270px;

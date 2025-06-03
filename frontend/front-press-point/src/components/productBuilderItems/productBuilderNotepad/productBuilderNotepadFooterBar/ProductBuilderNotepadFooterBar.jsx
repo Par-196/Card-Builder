@@ -1,9 +1,7 @@
 import './ProductBuilderNotepadFooterBar.css'
 import NumberOfUnitsOfProduct from '../../../../ui/textField/productBuilderTextField/NumberOfUnitsOfProduct.jsx'
 import TotalPriceTextField from '../../../../ui/textField/productBuilderTextField/TotalPriceTextField.jsx'
-import PostcardPaperDensityButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardPaperDensityButton.jsx'
-import PostcardLaminationButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardLaminationButton.jsx'
-
+import FlyerLaminationButtons from '../../../../ui/buttons/productBuilderButtons/flyerButtons/FlyerLaminationButtons.jsx'
 export default function ProductBuilderNotepadFooterBar({ price, units, onUnitsChange, paperDensity, setPaperDensity, lamination, setLamination })
 {
     const handleUnitsChange = (event) => {
@@ -36,23 +34,12 @@ export default function ProductBuilderNotepadFooterBar({ price, units, onUnitsCh
                         <NumberOfUnitsOfProduct value={units} onChange={handleUnitsChange}/>
                     </div>
                 </div>
-                <div className='product-builder-postcard-footer-bar-button-paper-density-box'>
-                    <div className='product-builder-postcard-footer-bar-button-paper-density-title'>
-                        <p>Щільність</p>
-                    </div>
-                    <div className='product-builder-postcard-footer-bar-button-paper-density'>
-                        <PostcardPaperDensityButton
-                        paperDensity={paperDensity}
-                        setPaperDensity={setPaperDensity}
-                        />
-                    </div>
-                </div>
                 <div className='product-builder-postcard-footer-bar-button-lamination-box'>
                     <div className='product-builder-postcard-footer-bar-button-lamination-title'>
                         <p>Ламінація</p>
                     </div>
                     <div className='product-builder-postcard-footer-bar-button-lamination'>
-                        <PostcardLaminationButton 
+                        <FlyerLaminationButtons 
                         lamination={lamination}
                         setLamination={setLamination} 
                         />
