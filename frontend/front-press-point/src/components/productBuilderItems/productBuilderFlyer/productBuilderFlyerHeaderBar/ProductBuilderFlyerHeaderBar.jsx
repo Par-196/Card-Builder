@@ -11,34 +11,34 @@ export default function ProductBuilderFlyerHeaderBar( {format, setFormat, print,
     const location = useLocation();
 
     return (
-        <div className='product-builder-postcard-header-bar'>
-            <div className='product-builder-postcard-header-back-button-box'>
+        <div className='product-builder-flyer-header-bar'>
+            <div className='product-builder-flyer-header-back-button-box'>
                 <BackButton  />
             </div>
-            <div className='product-builder-postcard-header-buttons'>
-                <div className="product-builder-postcard-header-button-format-box">
-                    <div className="product-builder-postcard-header-button-format-title">
+            <div className='product-builder-flyer-header-buttons'>
+                <div className="product-builder-flyer-header-button-format-box">
+                    <div className="product-builder-flyer-header-button-format-title">
                         <p>Формат</p>
                     </div>
-                    <div className="product-builder-postcard-header-button-format">
+                    <div className="product-builder-flyer-header-button-format">
                         <PostcardFormatButtons 
                         format={format} 
                         setFormat={setFormat} 
                         />
                     </div>
                 </div>
-                <div className="product-builder-postcard-header-button-print-box">
-                    <div className="product-builder-postcard-header-button-format-title">
+                <div className="product-builder-flyer-header-button-print-box">
+                    <div className="product-builder-flyer-header-button-format-title">
                         <p>Друк</p>
                     </div>
-                    <div className="product-builder-postcard-header-button-print">
+                    <div className="product-builder-flyer-header-button-print">
                         <PostcardPrintButton
                         print={print}
                         setPrint={setPrint}
                          />
                     </div>
                 </div>
-                <div className="product-builder-postcard-header-buttons-builder-order">
+                <div className="product-builder-flyer-header-buttons-builder-order">
                     <ProductBuilderOrderButton orderData={orderData} onCreateOrder={onCreateOrder}/>
                 </div>
             </div>

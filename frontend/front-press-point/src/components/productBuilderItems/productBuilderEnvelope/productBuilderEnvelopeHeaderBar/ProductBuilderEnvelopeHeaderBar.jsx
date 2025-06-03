@@ -1,44 +1,28 @@
 import "./ProductBuilderEnvelopeHeaderBar.css"
 import BackButton from "../../../../ui/buttons/productBuilderButtons/BackButton.jsx"
-import PostcardFormatButtons from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardFormatButtons.jsx'
-import PostcardPrintButton from '../../../../ui/buttons/productBuilderButtons/postcardButtons/PostcardPrintButton.jsx'
+import EnvelopeFormatButton from "../../../../ui/buttons/productBuilderButtons/envelopeButtons/envelopeFormatButton.jsx";
 import ProductBuilderOrderButton from '../../../../ui/buttons/productBuilderButtons/ProductBuilderOrderButton.jsx'
-import { useLocation } from 'react-router-dom';
 
-
-export default function ProductBuilderEnvelopeHeaderBar( {format, setFormat, print, setPrint, orderData, onCreateOrder } )
+export default function ProductBuilderEnvelopeHeaderBar( {format, setFormat, orderData, onCreateOrder } )
 {
-    const location = useLocation();
-
     return (
-        <div className='product-builder-postcard-header-bar'>
-            <div className='product-builder-postcard-header-back-button-box'>
+        <div className='product-builder-envelope-header-bar'>
+            <div className='product-builder-envelope-header-back-button-box'>
                 <BackButton  />
             </div>
-            <div className='product-builder-postcard-header-buttons'>
-                <div className="product-builder-postcard-header-button-format-box">
-                    <div className="product-builder-postcard-header-button-format-title">
+            <div className='product-builder-envelope-header-buttons'>
+                <div className="product-builder-envelope-header-button-format-box">
+                    <div className="product-builder-envelope-header-button-format-title">
                         <p>Формат</p>
                     </div>
-                    <div className="product-builder-postcard-header-button-format">
-                        <PostcardFormatButtons 
+                    <div className="product-builder-envelope-header-button-format">
+                        <EnvelopeFormatButton 
                         format={format} 
                         setFormat={setFormat} 
                         />
                     </div>
                 </div>
-                <div className="product-builder-postcard-header-button-print-box">
-                    <div className="product-builder-postcard-header-button-format-title">
-                        <p>Друк</p>
-                    </div>
-                    <div className="product-builder-postcard-header-button-print">
-                        <PostcardPrintButton
-                        print={print}
-                        setPrint={setPrint}
-                         />
-                    </div>
-                </div>
-                <div className="product-builder-postcard-header-buttons-builder-order">
+                <div className="product-builder-envelope-header-buttons-builder-order">
                     <ProductBuilderOrderButton orderData={orderData} onCreateOrder={onCreateOrder}/>
                 </div>
             </div>

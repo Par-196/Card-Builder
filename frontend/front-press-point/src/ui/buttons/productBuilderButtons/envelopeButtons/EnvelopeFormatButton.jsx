@@ -11,12 +11,12 @@ export default function EnvelopeFormatButton({format, setFormat}) {
     <ButtonGroup
       color='black'
     >
-      {['Стандартний', 'Євро'].map((label) => (
+      {['Євро', 'C6'].map((label) => (
         <Button
           key={label}
           onClick={() => handleClick(label)}
           sx={{
-            width: 150,
+            width: 135,
             height: 50,
             fontSize: 18,
             fontWeight: 600,

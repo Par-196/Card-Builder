@@ -1,11 +1,11 @@
-.product-builder-postcard-main-content
+.product-builder-flyer-main-content
 {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
 }
-.product-builder-postcard-main-content-left-side-container
+.product-builder-flyer-main-content-left-side-container
 {
     width: 449px;
     height: 643px;
@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: row;
 }
-.product-builder-postcard-main-content-left-side-container-left-box-buttons
+.product-builder-flyer-main-content-left-side-container-left-box-buttons
 {
     width: 99px;
     height: 100%;
@@ -21,14 +21,14 @@
     display: flex;
     flex-direction: column;
 }
-.product-builder-postcard-main-content-left-side-container-right-box-content
+.product-builder-flyer-main-content-left-side-container-right-box-content
 {
     width: 349px;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.product-builder-postcard-main-content-left-side-container-right-box-button-and-input-image-box
+.product-builder-flyer-main-content-left-side-container-right-box-button-and-input-image-box
 {
     width: calc(100% - 50px);
     height: calc(45% - 25px);
@@ -38,17 +38,17 @@
     align-items: center;
     margin: 25px 25px 0 25px;
 }
-.product-builder-postcard-main-content-left-side-container-right-box-image-box
+.product-builder-flyer-main-content-left-side-container-right-box-image-box
 {
     width: 300px;
     background-size: cover;
 }
-.product-builder-postcard-main-content-left-side-container-right-box-button-image
+.product-builder-flyer-main-content-left-side-container-right-box-button-image
 {
     width: 300px;
     background-size: cover;
 }
-.product-builder-postcard-main-content-left-side-container-right-box-input-image
+.product-builder-flyer-main-content-left-side-container-right-box-input-image
 {
     width: calc(100%);
     height: calc(55%);
@@ -57,7 +57,7 @@
     justify-content: center;
     align-items: center;
 }
-.product-builder-postcard-main-content-left-side-container-right-box-text-button
+.product-builder-flyer-main-content-left-side-container-right-box-text-button
 {
     width: 349px;
     height: 100px;
@@ -65,12 +65,12 @@
     justify-content: center;
     align-items: center;
 }
-.product-builder-postcard-main-content-right-side-container
+.product-builder-flyer-main-content-right-side-container
 {
     width: calc(100% - 449px);
     height: 643px;
 }
-.product-builder-postcard-main-content-right-side-text-customization-buttons
+.product-builder-flyer-main-content-right-side-text-customization-buttons
 {
     width: 100%;
     height: 60px;
@@ -78,7 +78,7 @@
     justify-content: center;
     align-items: center;
 }
-.product-builder-postcard-main-content-right-side-drag-and-drop-field
+.product-builder-flyer-main-content-right-side-drag-and-drop-field
 {
     width: 100%;
     height: calc(100% - 60px);
