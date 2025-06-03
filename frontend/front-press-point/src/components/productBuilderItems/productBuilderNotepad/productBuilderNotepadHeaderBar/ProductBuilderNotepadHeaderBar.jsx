@@ -1,13 +1,12 @@
 import "./ProductBuilderNotepadHeaderBar.css"
 import BackButton from "../../../../ui/buttons/productBuilderButtons/BackButton.jsx"
 import NotepadFormatButton from '../../../../ui/buttons/productBuilderButtons/notepadButtons/NotepadFormatButton.jsx'
-import NotepadWireBindingButton from "../../../../ui/buttons/productBuilderButtons/notepadButtons/NotepadWireBindingButton.jsx"
+import NotepadRibbonButton from "../../../../ui/buttons/productBuilderButtons/notepadButtons/NotepadRibbonButton.jsx"
 import ProductBuilderOrderButton from '../../../../ui/buttons/productBuilderButtons/ProductBuilderOrderButton.jsx'
 
 
-export default function ProductBuilderNotepadHeaderBar( {format, setFormat, wireBinding, setWireBinding, orderData, onCreateOrder } )
+export default function ProductBuilderNotepadHeaderBar( {format, setFormat, ribbon, setRibbon, orderData, onCreateOrder } )
 {
-
     return (
         <div className='product-builder-notepad-header-bar'>
             <div className='product-builder-notepad-header-back-button-box'>
@@ -27,9 +26,9 @@ export default function ProductBuilderNotepadHeaderBar( {format, setFormat, wire
                 </div>
                 <div className="product-builder-notepad-header-button-print-box">
                     <div className="product-builder-notepad-header-button">
-                        <NotepadWireBindingButton
-                        wireBinding={wireBinding}
-                        setWireBinding={setWireBinding}
+                        <NotepadRibbonButton
+                        ribbon={ribbon}
+                        setRibbon={setRibbon}
                          />
                     </div>
                 </div>

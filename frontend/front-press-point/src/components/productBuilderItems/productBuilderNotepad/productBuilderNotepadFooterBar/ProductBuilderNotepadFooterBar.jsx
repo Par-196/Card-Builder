@@ -1,11 +1,11 @@
 import './ProductBuilderNotepadFooterBar.css'
 import NumberOfUnitsOfProduct from '../../../../ui/textField/productBuilderTextField/NumberOfUnitsOfProduct.jsx'
 import TotalPriceTextField from '../../../../ui/textField/productBuilderTextField/TotalPriceTextField.jsx'
-import NotepadRibbonButton from '../../../../ui/buttons/productBuilderButtons/notepadButtons/NotepadRibbonButton.jsx';
+import NotepadWireBindingButton from '../../../../ui/buttons/productBuilderButtons/notepadButtons/NotepadWireBindingButton.jsx'
 
 
 
-export default function ProductBuilderNotepadFooterBar({ price, units, onUnitsChange, ribbon, setRibbon })
+export default function ProductBuilderNotepadFooterBar({ price, units, onUnitsChange, wireBinding, setWireBinding })
 {
     const handleUnitsChange = (event) => {
     const newValue = event.target.value;
@@ -39,9 +39,9 @@ export default function ProductBuilderNotepadFooterBar({ price, units, onUnitsCh
                 </div>
                 <div className='product-builder-notepad-footer-bar-button-box'>
                     <div className='product-builder-notepad-footer-bar-button'>
-                        <NotepadRibbonButton 
-                        ribbon={ribbon}
-                        setRibbon={setRibbon} 
+                        <NotepadWireBindingButton 
+                        wireBinding={wireBinding}
+                        setWireBinding={setWireBinding}
                         />
                     </div>
                 </div>

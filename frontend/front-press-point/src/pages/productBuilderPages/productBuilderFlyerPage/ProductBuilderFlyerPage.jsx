@@ -49,7 +49,7 @@ export default function ProductBuilderFlyerPage() {
         if (n >= 1001) return '1001-5000';
         if (n >= 501) return '501-1000';
         if (n >= 201) return '201-500';
-        if (n >= 100) return '100-200';
+        if (n >= 100) return '1-200';
         return '1-200'; 
     }
 

@@ -1,4 +1,4 @@
-.product-builder-postcard-header-bar
+.product-builder-tag-header-bar
 {
     width: 100%;
     height: 99px;
@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: row;
 }
-.product-builder-postcard-header-back-button-box {
+.product-builder-tag-header-back-button-box {
     width: 449px;
     height: 99px;
     border-right: 1px solid black;
@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
 }
-.product-builder-postcard-header-buttons
+.product-builder-tag-header-buttons
 {
     width: calc(100% - 549px);
     height: 99px;
@@ -26,17 +26,18 @@
     justify-content: space-between;
     align-items: center;
     margin-right: 100px;
+    margin-left: 50px;
 }
-.product-builder-postcard-header-button-format-box
+.product-builder-tag-header-button-format-box
 {
-    width: 300px;
+    width: 410px;
     height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 50px;
+    gap: 40px;
 }
-.product-builder-postcard-header-button-format-title
+.product-builder-tag-header-button-format-title
 {
     width: 70px;
     height: 50px;
@@ -44,12 +45,12 @@
     display: flex;
     align-items: center;
 }
-.product-builder-postcard-header-button-format
+.product-builder-tag-header-button-format
 {
-    width: 200px;
+    width: 300px;
     height: 50px;
 }
-.product-builder-postcard-header-button-print-box
+.product-builder-tag-header-button-print-box
 {
     width: 414px;
     height: 50px;
@@ -57,7 +58,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.product-builder-postcard-header-button-print
+.product-builder-tag-header-button-print
 {
     width: 334px;
     height: 50px;
@@ -65,7 +66,7 @@
     display: flex;
     align-items: center;
 }
-.product-builder-postcard-header-buttons-builder-order
+.product-builder-tag-header-buttons-builder-order
 {
     width: 270px;
     height: 60px;

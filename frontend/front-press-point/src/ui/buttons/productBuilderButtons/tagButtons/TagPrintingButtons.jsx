@@ -1,17 +1,17 @@
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 
-export default function FlyerLaminationButtons({lamination, setLamination}) {
+export default function TagPrintingButtons({print, setPrint}) {
 
   const handleClick = (label) => {
-    setLamination(label);
+    setPrint(label);
   };
 
   return (
     <ButtonGroup
       color='black'
     >
-      {['Матова', 'Глянцева'].map((label) => (
+      {['Одностр', 'Двостр'].map((label) => (
         <Button
           key={label}
           onClick={() => handleClick(label)}
@@ -24,8 +24,8 @@ export default function FlyerLaminationButtons({lamination, setLamination}) {
             textTransform: 'none',
             border: '1px solid black',
             borderRadius: '10px',
-            backgroundColor: lamination === label ? '#ffffff' : '#242424',
-            color: lamination === label ? '#000000' : '#ffffff',
+            backgroundColor: print === label ? '#ffffff' : '#242424',
+            color: print === label ? '#000000' : '#ffffff',
           }}
         >
           {label}

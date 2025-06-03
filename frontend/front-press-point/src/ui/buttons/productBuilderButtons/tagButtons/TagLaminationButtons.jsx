@@ -1,10 +1,10 @@
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 
-export default function FlyerLaminationButtons({lamination, setLamination}) {
+export default function TagLaminationButtons({lamination, setLamination}) {
 
-  const handleClick = (label) => {
-    setLamination(label);
+  const handleClick = (value) => {
+    setLamination(value);
   };
 
   return (

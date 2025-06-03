@@ -136,8 +136,8 @@ const postPrintingData = [
             <ProductBuilderNotepadHeaderBar
                 format={format}
                 setFormat={setFormat}
-                wireBinding={wireBinding}
-                setWireBinding={setWireBinding}
+                ribbon={ribbon}
+                setRibbon={setRibbon}
                 orderData={{
                     product: selectedTitle,
                     format,
@@ -153,8 +153,6 @@ const postPrintingData = [
                 price={totalPrice}
                 units={units}
                 onUnitsChange={setUnits}
-                ribbon={ribbon}
-                setRibbon={setRibbon}
                 wireBinding={wireBinding}
                 setWireBinding={setWireBinding}
             />
